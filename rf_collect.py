@@ -16,9 +16,9 @@ import RFExplorer
 # global variables and initialization
 #---------------------------------------------------------
 
-SERIALPORT = "/dev/cu.SLAB_USBtoUART"    #serial port identifier, use None to autodetect
+#SERIALPORT = "/dev/cu.SLAB_USBtoUART"    #serial port identifier, use None to autodetect
 BAUDRATE = 500000
-
+SERIALPORT = "/dev/ttyUSB0"
 objRFE = RFExplorer.RFECommunicator()     #Initialize object and thread
 TOTAL_SECONDS = 10           #Initialize time span to display activity
 PRINT_COUNT = 0
