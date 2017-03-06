@@ -18,11 +18,11 @@ import serial.tools.list_ports
 # global variables and initialization
 #---------------------------------------------------------
 
-#SERIALPORT = "/dev/cu.SLAB_USBtoUART"	  #serial port identifier, use None to autodetect
+SERIALPORT = "/dev/cu.SLAB_USBtoUART"	  #serial port identifier, use None to autodetect
 BAUDRATE = 500000
-SERIALPORT = "/dev/ttyUSB0"
+#SERIALPORT = "/dev/ttyUSB0"
 objRFE = RFExplorer.RFECommunicator()	  #Initialize object and thread
-objRFE.m_arrValidCP2102Ports = [s for s in serial.tools.list_ports.comports() if s.device == '/dev/ttyUSB0']
+objRFE.m_arrValidCP2102Ports = [s for s in serial.tools.list_ports.comports() if s.device == SERIALPORT]
 TOTAL_SECONDS = 10			 #Initialize time span to display activity
 MIN_FREQ = 0
 MAX_FREQ = 0
@@ -38,8 +38,9 @@ def PrintData(objRFE):
 	"""
 	nInd = objRFE.SweepData.Count-1
 	objSweepTemp = objRFE.SweepData.GetData(nInd)
-	print("in PrintData")
-	print("start freq", objSweepTemp.m_fStartFrequencyMHZ, "end freq", objSweepTemp.m_fStartFrequencyMHZ + objSweepTemp.m_fStepFrequencyMHZ*len(objSweepTemp.m_arrAmplitude))
+	#print("in PrintData")
+	#print("start freq", objSweepTemp.m_fStartFrequencyMHZ, "end freq", objSweepTemp.m_fStartFrequencyMHZ + objSweepTemp.m_fStepFrequencyMHZ*len(objSweepTemp.m_arrAmplitude))
+	print(objSweepTemp.m_arrAmplitude)
 	#nStep = objSweepTemp.GetPeakStep()		 #Get index of the peak
 	#fAmplitudeDBM = objSweepTemp.GetAmplitude_DBM(nStep)	 #Get amplitude of the peak
 	#fCenterFreq = objSweepTemp.GetFrequencyMHZ(nStep)	 #Get frequency of the peak
@@ -127,6 +128,7 @@ try:
 				#Log data if received new sweep only
 				if (objRFE.SweepData.Count>nLastDisplayIndex):
 					dBm = signal_strength(objRFE, center_fq)
+					PrintData(objRFE)
 					if dBm is None:
 						break
 					writer.writerow({'frequency': center_fq, 'dBm': dBm})
