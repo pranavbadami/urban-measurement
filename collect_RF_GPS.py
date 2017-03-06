@@ -95,7 +95,7 @@ try:
 		#open log file
 		num_log = len(glob.glob1("/home/pi/urban-measurement/data/", "log*.txt"))
 		fields = ['time', 'frequency', 'dBm', 'latitude', 'lat_dir', 'longitude', 'lon_dir']
-		log = open("/home/pi/urban-measurement/data/log" +str(num_log) + ".txt", "w") as f
+		log = open("/home/pi/urban-measurement/data/log" +str(num_log) + ".txt", "w")
 		writer = csv.DictWriter(log, fieldnames=fields)
 		writer.writeheader()
 
