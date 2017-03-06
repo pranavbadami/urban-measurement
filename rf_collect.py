@@ -13,7 +13,7 @@ import time
 from datetime import datetime, timedelta
 import RFExplorer
 import csv
-
+import serial.tools.list_ports
 #---------------------------------------------------------
 # global variables and initialization
 #---------------------------------------------------------
@@ -22,6 +22,7 @@ import csv
 BAUDRATE = 500000
 SERIALPORT = "/dev/ttyUSB0"
 objRFE = RFExplorer.RFECommunicator()	  #Initialize object and thread
+objRFE.m_arrValidCP2102Ports = [s for s in serial.tools.list_ports.comports() if s.device == '/dev/ttyUSB0']
 TOTAL_SECONDS = 10			 #Initialize time span to display activity
 MIN_FREQ = 0
 MAX_FREQ = 0
@@ -89,7 +90,7 @@ def signal_strength(objRFE, freq):
 
 try:
 	#Find and show valid serial ports
-	objRFE.GetConnectedPorts()	  
+	#objRFE.GetConnectedPorts()	  
 
 	#Connect to available port
 	if (objRFE.ConnectPort(SERIALPORT, BAUDRATE)):

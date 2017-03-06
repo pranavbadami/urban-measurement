@@ -25,7 +25,7 @@ ser = serial.Serial(
 	bytesize = serial.EIGHTBITS,
 	timeout = 1
 )
-
+print("name", ser.name)
 #---------------------------------------------------------
 # RFExplorer Helper functions
 #---------------------------------------------------------
@@ -95,7 +95,7 @@ try:
 		#open log file
 		num_log = len(glob.glob1("/home/pi/urban-measurement/data/", "log*.txt"))
 		fields = ['time', 'frequency', 'dBm', 'latitude', 'lat_dir', 'longitude', 'lon_dir']
-		log = open("/home/pi/urban-measurement/data/log" +str(num_log) + ".txt", "w")
+		log = open("/home/pi/urban-measurement/data/log" +str(num_log+1) + ".txt", "w")
 		writer = csv.DictWriter(log, fieldnames=fields)
 		writer.writeheader()
 
@@ -126,14 +126,18 @@ try:
 
 			while True:    
 				time_elapsed = (datetime.now() - startTime).seconds
-				
+				print("hello")
 				#Read GPS data
 				#Save last RMC data
 				gps_bytes = ser.readline()
+				print("got bytes")
 				gps_data = str(gps_bytes, 'utf-8')
 				gps_msg = pynmea2.parse(gps_data)
-				if type(gps_msg) == pynmea2.RMC and gps_msg.status == 'A':
+				print(gps_msg)
+				#if type(gps_msg) == pynmea2.RMC and gps_msg.status == 'A':
+				if type(gps_msg) == pynmea2.RMC:
 					latitude = float(gps_msg.lat)
+					print("RMC", latitude)
 					longitude = float(gps_msg.lon)
 					lon_dir = gps_msg.lon_dir
 					lat_dir = gps_msg.lat_dir
