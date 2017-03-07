@@ -18,12 +18,12 @@ import serial.tools.list_ports
 # global variables and initialization
 #---------------------------------------------------------
 
-SERIALPORT = "/dev/cu.SLAB_USBtoUART"	  #serial port identifier, use None to autodetect
+#SERIALPORT = "/dev/cu.SLAB_USBtoUART"	  #serial port identifier, use None to autodetect
 BAUDRATE = 500000
-#SERIALPORT = "/dev/ttyUSB0"
+SERIALPORT = "/dev/ttyUSB0"
 objRFE = RFExplorer.RFECommunicator()	  #Initialize object and thread
 objRFE.m_arrValidCP2102Ports = [s for s in serial.tools.list_ports.comports() if s.device == SERIALPORT]
-TOTAL_SECONDS = 10			 #Initialize time span to display activity
+TOTAL_SECONDS = 100			 #Initialize time span to display activity
 MIN_FREQ = 0
 MAX_FREQ = 0
 STEP_FREQ = 0

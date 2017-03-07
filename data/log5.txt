@@ -1,1 +1,0 @@
-time,frequency,dBm,latitude,lat_dir,longitude,lon_dir

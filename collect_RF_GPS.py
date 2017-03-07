@@ -6,14 +6,15 @@ import glob
 import math
 import csv
 import pynmea2
+import threading
+import random
 
 BAUDRATE_RFE = 500000
 BAUDRATE_GPS = 9600
 SERIALPORT_RFE = "/dev/ttyUSB0"
 SERIALPORT_GPS = "/dev/ttyAMA0"
 objRFE = RFExplorer.RFECommunicator()	  #Initialize object and thread
-objRFE.m_arrValidCP2102Ports = [s for s in serial.tools.list_ports.comports()
-								if s.device == SERIALPORT]
+objRFE.m_arrValidCP2102Ports = [s for s in serial.tools.list_ports.comports() if s.device == SERIALPORT_RFE]
 
 TOTAL_SECONDS = 10			 #Initialize time span to display activity
 MIN_FREQ = 0
@@ -21,15 +22,12 @@ MAX_FREQ = 0
 STEP_FREQ = 0
 center_fq = 2442
 
-# serial definition for GPS Breakout
-gps_ser = serial.Serial(
-	port = SERIALPORT_GPS,
-	baudrate = BAUDRATE_GPS,
-	parity = serial.PARITY_NONE,
-	stopbits = serial.STOPBITS_ONE,
-	bytesize = serial.EIGHTBITS,
-	timeout = 1
-)
+
+
+latitude = None
+longitude = None
+lat_dir = None
+lon_dir = None
 
 #---------------------------------------------------------
 # RFExplorer Helper functions
@@ -86,6 +84,51 @@ def signal_strength(objRFE, freq):
 		return objSweepTemp.m_arrAmplitude[index]
 
 #---------------------------------------------------------
+# GPS Threading
+#---------------------------------------------------------
+class GPSData(threading.Thread):
+	def __init__(self):
+		threading.Thread.__init__(self)
+	
+	def run(self):
+		global latitude
+		global longitude
+		global lat_dir
+		global lon_dir
+	
+		# serial definition for GPS Breakout
+		gps_ser = serial.Serial(
+			port = SERIALPORT_GPS,
+			baudrate = BAUDRATE_GPS,
+			parity = serial.PARITY_NONE,
+			stopbits = serial.STOPBITS_ONE,
+			bytesize = serial.EIGHTBITS,
+			timeout = 1
+		)	
+
+		while True:
+			#Read GPS data and save latest, valid RMC data
+			try:
+				gps_bytes = gps_ser.readline()
+				gps_data = str(gps_bytes, 'utf-8')
+				print("data", gps_data)
+				gps_msg = pynmea2.parse(gps_data)
+
+				#if type(gps_msg) == pynmea2.RMC and gps_msg.status == 'A':
+				if type(gps_msg) == pynmea2.RMC:
+					#latitude = float(gps_msg.lat)
+					#longitude = float(gps_msg.lon)
+					#lon_dir = gps_msg.lon_dir
+					#lat_dir = gps_msg.lat_dir
+					latitude = random.random()
+					#print("latitude", latitude)
+					longitude = random.random()
+					lon_dir = "W"
+					lat_dir = "N"
+			except:
+				pass
+
+#---------------------------------------------------------
 # Main processing loop
 #---------------------------------------------------------
 time.sleep(5)
@@ -93,12 +136,12 @@ time.sleep(5)
 try:
 
 	#Connect to available port
-	if (objRFE.ConnectPort(SERIALPORT, BAUDRATE)):
+	if (objRFE.ConnectPort(SERIALPORT_RFE, BAUDRATE_RFE)):
  
 		#open log file
-		num_log = len(glob.glob1("/home/pi/urban-measurement/data/", "log*.txt"))
+		num_log = len(glob.glob1("/home/pi/urban-measurement/data/", "log*.csv"))
 		fields = ['time', 'frequency', 'dBm', 'latitude', 'lat_dir', 'longitude', 'lon_dir']
-		log = open("/home/pi/urban-measurement/data/log" +str(num_log+1) + ".txt", "w")
+		log = open("/home/pi/urban-measurement/data/log" +str(num_log+1) + ".csv", "w")
 		writer = csv.DictWriter(log, fieldnames=fields)
 		writer.writeheader()
 
@@ -122,37 +165,26 @@ try:
 			#Process indefinitely
 			nLastDisplayIndex=0
 			startTime=datetime.now()
-			latitude = None
-			longitude = None
-			lat_dir = None
-			lon_dir = None
-
+			
+			GPSData().start()
+			print("Hey")
 			while True:    
 				time_elapsed = (datetime.now() - startTime).seconds
 
-				#Read GPS data and save latest, valid RMC data
-				gps_bytes = gps_ser.readline()
-				gps_data = str(gps_bytes, 'utf-8')
-				gps_msg = pynmea2.parse(gps_data)
-
-				#if type(gps_msg) == pynmea2.RMC and gps_msg.status == 'A':
-				if type(gps_msg) == pynmea2.RMC:
-					latitude = float(gps_msg.lat)
-					longitude = float(gps_msg.lon)
-					lon_dir = gps_msg.lon_dir
-					lat_dir = gps_msg.lat_dir
-
-				#Process all received data from RFE device 
+								#Process all received data from RFE device 
 				objRFE.ProcessReceivedString(True)
 				
 				#Log data if received new sweep only
 				if (objRFE.SweepData.Count>nLastDisplayIndex):
+					#print("whoa")
 					dBm = signal_strength(objRFE, center_fq)
 					if dBm is None:
 						break
 					#Log when new sweep data and valid RMC data
+					#print("above lat check")
 					if latitude is not None:
-						['time', 'frequency', 'dBm', 'latitude', 'lat_dir', 'longitude', 'lon_dir']
+						print("passed lat check")
+						
 						writer.writerow({
 										'time': time_elapsed,
 										'frequency': center_fq, 
@@ -162,6 +194,8 @@ try:
 										'longitude': longitude,
 										'lon_dir': lon_dir
 										})
+
+						print("after writerow", dBm, latitude)
 				nLastDisplayIndex=objRFE.SweepData.Count
 		else:
 			print("Error: Device connected is a Signal Generator. \nPlease, connect a Spectrum Analyzer")
