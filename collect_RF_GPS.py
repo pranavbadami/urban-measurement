@@ -7,9 +7,14 @@ import math
 import csv
 import pynmea2
 
-BAUDRATE = 500000
-SERIALPORT = "/dev/ttyUSB0"
+BAUDRATE_RFE = 500000
+BAUDRATE_GPS = 9600
+SERIALPORT_RFE = "/dev/ttyUSB0"
+SERIALPORT_GPS = "/dev/ttyAMA0"
 objRFE = RFExplorer.RFECommunicator()	  #Initialize object and thread
+objRFE.m_arrValidCP2102Ports = [s for s in serial.tools.list_ports.comports()
+								if s.device == SERIALPORT]
+
 TOTAL_SECONDS = 10			 #Initialize time span to display activity
 MIN_FREQ = 0
 MAX_FREQ = 0
@@ -17,15 +22,15 @@ STEP_FREQ = 0
 center_fq = 2442
 
 # serial definition for GPS Breakout
-ser = serial.Serial(
-	port = '/dev/ttyAMA0',
-	baudrate = 9600,
+gps_ser = serial.Serial(
+	port = SERIALPORT_GPS,
+	baudrate = BAUDRATE_GPS,
 	parity = serial.PARITY_NONE,
 	stopbits = serial.STOPBITS_ONE,
 	bytesize = serial.EIGHTBITS,
 	timeout = 1
 )
-print("name", ser.name)
+
 #---------------------------------------------------------
 # RFExplorer Helper functions
 #---------------------------------------------------------
@@ -86,8 +91,6 @@ def signal_strength(objRFE, freq):
 time.sleep(5)
 
 try:
-	#Find and show valid serial ports
-	objRFE.GetConnectedPorts()	  
 
 	#Connect to available port
 	if (objRFE.ConnectPort(SERIALPORT, BAUDRATE)):
@@ -126,24 +129,22 @@ try:
 
 			while True:    
 				time_elapsed = (datetime.now() - startTime).seconds
-				print("hello")
-				#Read GPS data
-				#Save last RMC data
-				gps_bytes = ser.readline()
-				print("got bytes")
+
+				#Read GPS data and save latest, valid RMC data
+				gps_bytes = gps_ser.readline()
 				gps_data = str(gps_bytes, 'utf-8')
 				gps_msg = pynmea2.parse(gps_data)
-				print(gps_msg)
+
 				#if type(gps_msg) == pynmea2.RMC and gps_msg.status == 'A':
 				if type(gps_msg) == pynmea2.RMC:
 					latitude = float(gps_msg.lat)
-					print("RMC", latitude)
 					longitude = float(gps_msg.lon)
 					lon_dir = gps_msg.lon_dir
 					lat_dir = gps_msg.lat_dir
 
-				#Process all received data from device 
+				#Process all received data from RFE device 
 				objRFE.ProcessReceivedString(True)
+				
 				#Log data if received new sweep only
 				if (objRFE.SweepData.Count>nLastDisplayIndex):
 					dBm = signal_strength(objRFE, center_fq)
