@@ -114,17 +114,17 @@ class GPSData(threading.Thread):
 				print("data", gps_data)
 				gps_msg = pynmea2.parse(gps_data)
 
-				#if type(gps_msg) == pynmea2.RMC and gps_msg.status == 'A':
-				if type(gps_msg) == pynmea2.RMC:
-					#latitude = float(gps_msg.lat)
-					#longitude = float(gps_msg.lon)
-					#lon_dir = gps_msg.lon_dir
-					#lat_dir = gps_msg.lat_dir
-					latitude = random.random()
+				if type(gps_msg) == pynmea2.RMC and gps_msg.status == 'A':
+				#if type(gps_msg) == pynmea2.RMC:
+					latitude = float(gps_msg.lat)
+					longitude = float(gps_msg.lon)
+					lon_dir = gps_msg.lon_dir
+					lat_dir = gps_msg.lat_dir
+					#latitude = random.random()
 					#print("latitude", latitude)
-					longitude = random.random()
-					lon_dir = "W"
-					lat_dir = "N"
+					#longitude = random.random()
+					#lon_dir = "W"
+					#lat_dir = "N"
 			except:
 				pass
 
