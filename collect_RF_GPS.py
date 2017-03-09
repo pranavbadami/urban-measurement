@@ -139,9 +139,9 @@ try:
 	if (objRFE.ConnectPort(SERIALPORT_RFE, BAUDRATE_RFE)):
  
 		#open log file
-		num_log = len(glob.glob1("/home/pi/urban-measurement/data/", "log*.csv"))
+		num_log = len(glob.glob1("/home/pi/data/", "log*.csv"))
 		fields = ['time', 'frequency', 'dBm', 'latitude', 'lat_dir', 'longitude', 'lon_dir']
-		log = open("/home/pi/urban-measurement/data/log" +str(num_log+1) + ".csv", "w")
+		log = open("/home/pi/data/log" +str(num_log+1) + ".csv", "w")
 		writer = csv.DictWriter(log, fieldnames=fields)
 		writer.writeheader()
 
