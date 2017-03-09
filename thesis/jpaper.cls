@@ -64,7 +64,7 @@
 \setlength{\droptitle}{-3.5em}
 
 \pretitle{\begin{center}\vspace{-.5in}
--- Independent Work Report Fall, \IWreport\ -- \\
+-- Independent Work Report, \IWreport\ -- \\
 \vspace{.35in}
 \normalfont\Large\bfseries}
 \posttitle{\par\end{center}}
