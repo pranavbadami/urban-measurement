@@ -7,6 +7,9 @@
 \widowpenalty=9999
 
 \usepackage[normalem]{ulem}
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+
 
 \begin{document}
 
@@ -50,7 +53,19 @@ The propagation of wireless signals in a noisy, obstacle-ridden urban environmen
 Much work has been conducted on measurement campaigns of wireless signal propagation. Theodore S. Rapaport has conducted many such campaigns in a variety of settings in order to explore real-world propagation in different environments. For example, Rapaport, Durgin, and Xu's "Measurements and Models for Radio Path Loss and Penetration Loss In and Around Homes and Trees at 5.8GHz" conducted such a campaign in a suburban area. Signal strength measurement were taken by moving a receiver around a 1m square area and averaged to represent the path loss for a given room or outdoor location[cite Rappaport]. Such campaigns, while useful for sampling signal strength at key locations, don't give a complete understanding of signal strength over a space. 
 Other campaigns have attempted to get a more complete measurement in an urban environment. A group of Brazilian researchers conducted a measurement campaign in Rio De Janeiro with a fixed transmitter on the window of an 8 story building. They built a receiver block with GPS and collected measurements by driving around streets surrounding the building housing the transmitter. GPS and signal strength measurements collected by the receiver block are joined to construct a map of measured signal strength at street level. While this may be useful for mobile Internet users at the street level, participants in a wireless mesh for home Internet may have receiver nodes at various heights, necessitating a more 3-D measurement of signal propagation in urban areas. 
 \subsection{[THIS PROJECT]: Robust Measurement}
-This project aims to develop a novel, robust measurement technique 
+This project aims to develop a novel, robust measurement technique to measure signal propagation in urban environments. Specifically, we aim to develop a technique that will provide a complete picture of signal propagation in 3-dimensional space around urban features. This is motivated by the desire to identify favorable locations for wireless mesh network nodes in cities and suburbs. \\
+To do this, we will conduct a drone based wireless signal propagation measurement campaign in a handful of locations on the Princeton campus. A measurement apparatus collecting measurements across the 2.4GHz wireless spectrum and a GPS antenna will be mounted on a drone, which will collect measurements at varying heights. The collected data can then be aggregated to get a comprehensive, robust 3-dimensional map of signal strengths around a certain urban feature, such as a courtyard or a street with buildings on both sides. \\
+
+The main research goal of this project is to be able to construct a plot of 3-D  "buckets" where the value associated with each bucket is the average signal strength measurement at a given frequency collected in the space occupied by that bucket. Fig 1 illustrates what such a plot may look like. A secondary research goal is to analyze these buckets of averaged values and determine which urban features led to higher overall signal strength. \\
+
+This approach is novel because it yields a comprehensive, 3-Dimensional understanding of signal strength; existing measurement techniques are restricted to 2-Dimensional maps or point measurements. Since this project is motivated by wireless mesh networks,conducting measurements at various heights is important as users can be situated at various floors. Another benefit of this novel approach is the ability to potentially automate this measurement procedure for larger urban environments in the future. \\
+
+\begin{figure}[h]
+	\caption{A mockup of the primary research goal: constructing a plot of 3-D "buckets" representing signal strength around urban features (gray buildings) given a fixed position transmitter (white).}
+	\includegraphics{measurement_goal}e
+	\centering
+\end{figure}
+
 
 \section{Outline}  
 
