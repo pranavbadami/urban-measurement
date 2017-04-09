@@ -8,7 +8,9 @@
 
 \usepackage[normalem]{ulem}
 \usepackage{graphicx}
+
 \graphicspath{ {figures/} }
+\setlength{\parindent}{4ex}
 
 
 \begin{document}
@@ -30,19 +32,22 @@ ABSTRACT PLACEHOLDER
 
 \section{Introduction (In Progress)}
 \subsection{The Problem: ISP Monopolies in the United States}
-Home Internet users in the United States are at the mercy of their Internet Service Provider(ISP). Users seeking relatively modern download (> 25 Mbps) and upload (> 3 Mbps) speeds for home Internet are extremely restricted in their choices. The FCC states that 30\% of Americans (measured in developed census blocks) have no ISPs delivering home Internet at these speeds, while another 48\% of Americans have only one ISP providing service at these speeds\cite{fcc15}. 
+Home Internet users in the United States are at the mercy of their Internet Service Provider(ISP). Users seeking relatively modern download (> 25 Mbps) and upload (> 3 Mbps) speeds for home Internet are extremely restricted in their choices. The FCC states that 30\% of Americans (measured in developed census blocks) have no ISPs delivering home Internet at these speeds, while another 48\% of Americans have only one ISP providing service at these speeds\cite{fcc15}.
 
-As a result of this lack of choice (and competition), American home Internet are forced to pay disproportionately high prices for relatively slow connections. For example, Americans pay higher prices for home Internet than Europeans across all categories of broadband speed[cite connectivity]:
+As a result of this lack of choice (and competition), American home Internet are forced to pay disproportionately high prices for relatively slow connections. For example, Americans pay higher prices for home Internet than Europeans across all categories of broadband speed[cite connectivity].
 
-INSERT FIGURE
+\begin{figure}[h]
+	\caption{A comparison of prices for various categories of broadband speeds in the United States versus Europe.}
+	\includegraphics{comparison}
+	\centering
+\end{figure}
 
 The plight of the American home Internet user is exposed even more when considering the highest available home Internet speeds for affordable Internet plans. While residents of Seoul and Hong Kong can choose among plans offering 300 Mbps connections in the price range of \$35-\$50, no American city has any plans offering > 50 Mbps speeds for the same price range. [cite connectivity] The much cheaper and faster connections available in Asia demonstrate that it is technologically feasible to provide fast home Internet connections for a low price. 
 
 Not coincidentally, ISPs in Asia operate in a much more competitive landscape, forcing them to provide quality service at a lower price. In South Korea, for example, upstart ISPs can lease, and sell, unused bandwidth from a public utility that reaches the vast majority of the clustered, urban population. Further, the South Korean government forced Korea Telecom to open its network in the '90s, leading to increased competition and lower prices for users[cite wired]. 
 
-The competitive landscape of Home internet service in the United States is dramatically different for a few reasons. First, the FCC has not taken as drastic action to spur competition as government entities in Asia have. In 2014, Tom Wheeler, Chairman of the FCC, acknowledged the lack of competition among ISPs and recognized a need for the FCC to do more to protect and create competition in the United States [cite Wheeler]. The policy aspects of ISP competition are an entirely separate issue that will not be tackled here. 
+Further, the population of the United States is large and spread out over a vast expanse of land. Reaching more homes in the United States requires laying lots of costly wire, which is often prohibitively expensive. Consider the efforts of Google Fiber. Google Fiber aims to offer connection speeds of 1000 Mbps at a comparable price to existing plans, reaching consumers in select neighborhoods of select American cities[cite google fiber]. According to Google, the process of bringing Fiber to a city involves initial exploration, network design, construction (laying fiber), and finally, customer sign up and installation. A Goldman Sachs report on Fiber, estimated that it would cost around \$140 billion for Google to cover the whole country[cite Goldman]. Further, the involved process required to dig and install fiber is extremely time consuming. The cost and time required to lay fiber across a wide geographic area makes it extremely difficult for even established companies like Google to enter the ISP realm, much less a host of smaller companies or startups. . In 2014, Tom Wheeler, Chairman of the FCC, acknowledged the lack of competition among ISPs and recognized a need for the FCC to do more to protect and create competition in the United States [cite Wheeler].
 
-Secondly, the population of the United States is large and spread out over a vast expanse of land. Reaching more homes in the United States requires laying lots of costly wire, which is often prohibitively expensive. Consider the efforts of Google Fiber. Google Fiber aims to offer connection speeds of 1000 Mbps at a comparable price to existing plans, reaching consumers in select neighborhoods of select American cities[cite google fiber]. According to Google, the process of bringing Fiber to a city involves initial exploration, network design, construction (laying fiber), and finally, customer sign up and installation. A Goldman Sachs report on Fiber, estimated that it would cost around \$140 billion for Google to cover the whole country[cite Goldman]. Further, the involved process required to dig and install fiber is extremely time consuming. The cost and time required to lay fiber across a wide geographic area makes it extremely difficult for even established companies like Google to enter the ISP realm, much less a host of smaller companies or startups.
 \subsection{A (Potential) Solution: Wireless Mesh Networks}
 With the cost of establishing novel, last-mile wired networks being so high, there has been a lot of work on establishing wireless networks. One such notable project is Roofnet, a wireless mesh featuring over 40 nodes spread out over the urban area of Cambridge, Massachusetts. Roofnet nodes consist of a small PC, an 802.11b card, and an 8 dBi omni-directional antenna. These nodes are primarily installed on three to four story tall buildings, with packets hopping wireless nodes until they reach a wireless node which is also connected to a gateway to the rest of the wired Internet[cite roofnet]. Individual users install these nodes on their roofs or windows and join the network. 
 
@@ -50,239 +55,90 @@ Similar to Roofnet, another community powered mesh exists in Red Hook, Brooklyn[
 
 \subsection{Challenges with Wireless: Propagation and Measurement}
 The propagation of wireless signals in a noisy, obstacle-ridden urban environment often results in wireless networks operating below peak efficiency. Buildings and other environmental obstacles, such as trees, can greatly increase the path loss of a wireless link between two nodes. Then, establishing a line-of-sight (LOS) connection between two wireless links is important for low-loss links and robust wireless networks. However, the Fresnel Zone (an ellipsoid-shaped volume) around the LOS must also be clear of obstacles for optimally low path loss between a transmitter and receiver. 
-Much work has been conducted on measurement campaigns of wireless signal propagation. Theodore S. Rapaport has conducted many such campaigns in a variety of settings in order to explore real-world propagation in different environments. For example, Rapaport, Durgin, and Xu's "Measurements and Models for Radio Path Loss and Penetration Loss In and Around Homes and Trees at 5.8GHz" conducted such a campaign in a suburban area. Signal strength measurement were taken by moving a receiver around a 1m square area and averaged to represent the path loss for a given room or outdoor location[cite Rappaport]. Such campaigns, while useful for sampling signal strength at key locations, don't give a complete understanding of signal strength over a space. 
-Other campaigns have attempted to get a more complete measurement in an urban environment. A group of Brazilian researchers conducted a measurement campaign in Rio De Janeiro with a fixed transmitter on the window of an 8 story building. They built a receiver block with GPS and collected measurements by driving around streets surrounding the building housing the transmitter. GPS and signal strength measurements collected by the receiver block are joined to construct a map of measured signal strength at street level. While this may be useful for mobile Internet users at the street level, participants in a wireless mesh for home Internet may have receiver nodes at various heights, necessitating a more 3-D measurement of signal propagation in urban areas. 
-\subsection{[THIS PROJECT]: Robust Measurement}
-This project aims to develop a novel, robust measurement technique to measure signal propagation in urban environments. Specifically, we aim to develop a technique that will provide a complete picture of signal propagation in 3-dimensional space around urban features. This is motivated by the desire to identify favorable locations for wireless mesh network nodes in cities and suburbs. \\
-To do this, we will conduct a drone based wireless signal propagation measurement campaign in a handful of locations on the Princeton campus. A measurement apparatus collecting measurements across the 2.4GHz wireless spectrum and a GPS antenna will be mounted on a drone, which will collect measurements at varying heights. The collected data can then be aggregated to get a comprehensive, robust 3-dimensional map of signal strengths around a certain urban feature, such as a courtyard or a street with buildings on both sides. \\
 
-The main research goal of this project is to be able to construct a plot of 3-D  "buckets" where the value associated with each bucket is the average signal strength measurement at a given frequency collected in the space occupied by that bucket. Fig 1 illustrates what such a plot may look like. A secondary research goal is to analyze these buckets of averaged values and determine which urban features led to higher overall signal strength. \\
+Much work has been conducted on measurement campaigns of wireless signal propagation. Theodore S. Rapaport has conducted many such campaigns in a variety of settings in order to explore real-world propagation in different environments. For example, Rapaport, Durgin, and Xu's "Measurements and Models for Radio Path Loss and Penetration Loss In and Around Homes and Trees at 5.8GHz" conducted such a campaign in a suburban area. Signal strength measurement were taken by moving a receiver around a 1m square area and averaged to represent the path loss for a given room or outdoor location[cite Rappaport]. Such campaigns, while useful for sampling signal strength at key locations, don't give a complete understanding of signal strength over a space. 
+
+Other campaigns have attempted to get a more complete measurement in an urban environment. A group of Brazilian researchers conducted a measurement campaign in Rio De Janeiro with a fixed transmitter on the window of an 8 story building. They built a receiver block with GPS and collected measurements by driving around streets surrounding the building housing the transmitter. GPS and signal strength measurements collected by the receiver block are joined to construct a map of measured signal strength at street level. While this may be useful for mobile Internet users at the street level, participants in a wireless mesh for home Internet may have receiver nodes at various heights, necessitating a more 3-D measurement of signal propagation in urban areas. 
+
+\subsection{[THIS PROJECT]: Robust Measurement}
+This project aims to develop a novel, robust measurement technique to measure signal propagation in urban environments. Specifically, we aim to develop a technique that will provide a complete picture of signal propagation in 3-dimensional space around urban features. This is motivated by the desire to identify favorable locations for wireless mesh network nodes in cities and suburbs.
+
+To do this, we will conduct a drone based wireless signal propagation measurement campaign in a handful of locations on the Princeton campus. A measurement apparatus collecting measurements across the 2.4GHz wireless spectrum and a GPS antenna will be mounted on a drone, which will collect measurements at varying heights. The collected data can then be aggregated to get a comprehensive, robust 3-dimensional map of signal strengths around a certain urban feature, such as a courtyard or a street with buildings on both sides.
+
+The main research goal of this project is to be able to construct a plot of 3-D  "buckets" where the value associated with each bucket is the average signal strength measurement at a given frequency collected in the space occupied by that bucket. Fig 1 illustrates what such a plot may look like. A secondary research goal is to analyze these buckets of averaged values and determine which urban features led to higher overall signal strength.
 
 This approach is novel because it yields a comprehensive, 3-Dimensional understanding of signal strength; existing measurement techniques are restricted to 2-Dimensional maps or point measurements. Since this project is motivated by wireless mesh networks,conducting measurements at various heights is important as users can be situated at various floors. Another benefit of this novel approach is the ability to potentially automate this measurement procedure for larger urban environments in the future. \\
 
 \begin{figure}[h]
 	\caption{A mockup of the primary research goal: constructing a plot of 3-D "buckets" representing signal strength around urban features (gray buildings) given a fixed position transmitter (white).}
-	\includegraphics{measurement_goal}e
+	\includegraphics{measurement_goal}
 	\centering
 \end{figure}
 
+\section{Implementation}
+Several implementation challenges presented themselves as we began to work towards the primary research goal. Mainly, transmitter configuration and receiver apparatus design are  important design choices for any measurement campaign. Then, interfacing with the equipment and recording the collected data was also an important element of the implementation.
 
-\section{Outline}  
+\subsection{Transmitter Selection and Configuration}
+Since this project was focused on measuring the performance of wireless networks in urban environments, it was imperative to choose a transmitter which would be typically used in an urban setting. Consider a mesh network configuration in a town such as Princeton. This mesh network would need to meet several key criteria. First, it would need to have a way to connect to the wired Internet at some wired gateway, which could be many miles away or even in another town altogether. One reasonable way to establish this connection would be with the use of high-throughput, carrier-grade, long-range backhaul links which can establish wireless connections at ranges upwards of 100 km [Ubiquiti cite].
 
-\subsection{Introduction}
-\begin{itemize}
-	\item Motivation - What is the problem? Why is it important?
-	\item Goal - What are we trying to accomplish?
-	\item Overview of challenge and previous work 
-	\item Approach 
-	\item Summary of implementation
-	\item Summary of results
-	\item (optional) Roadmap: The remainder of this paper is organized as follows....
-\end{itemize}
+End users of the mesh network living in Princeton would not be connecting directly to these backhaul links, however. Backhaul links would need to be placed at high elevations and meticulously aligned with one another to establish a LOS connection. It may be impossible for users to establish LOS connections with backhaul links because users will often have windows or roofs with obstructed views; further, they will also have pyhsically smaller, lower power antennas where they may not be able to transmit to a distant backhaul link.
 
-\subsection{Problem Background and Related Work}
-\begin{itemize}
-	\item Survey of prior work with similar goals 
-	\item For each previous approach, explain what has been done and why it does not meet your goal
-\end{itemize}
+Instead, a third kind of antenna is required to fill in the gaps between user bridge antennas and powerful backhaul links. A Point-to-Multi-Point (PtMP) link, which transmits to several receiving antennas, is required to complete the mesh network configuration. These PtMP links are more cost effective and smaller than backhaul links; they can be placed around the town of Princeton and serve as connection points for the end users who live on the same street, housing development, or intersection as one of these links.
 
-\subsection{Approach}
-\begin{itemize}
-	\item Key novel idea
-	\item Why it is a good idea
-\end{itemize}
+For this project, the Ubiquiti NanoStation M2 will be used; the NSM2 is a PtMP link which operates in the 2.4GHz spectrum. The NSM2 is appropriate for an urban mesh network because it has good 180-degree coverage in the azimuth and elevation planes. Then, if it is placed on top of a building facing the street, it can ideally provide a strong signal to a number of other buildings on the same street at a variety of elevations (floors); a large number of users would be able to connect to the locoM2 from their windows and join the wireless mesh.
 
-\subsection{Implementation}
-\begin{itemize}
-	\item System overview (flow chart of key steps?)
-	\item Subsection for each step or issue you addressed
-	\begin{itemize}
-		\item Problem statement
-		\item Possible approaches
-		\item Chosen approach and why
-		\item Implementaton details
-	\end{itemize}
-\end{itemize}
-
-\subsection{Evaluation}
-\begin{itemize}
-	\item Experiment design...
-	\item Data...
-	\item Metrics...
-	\item Comparisons...
-	\item Qualitative results...
-	\item Quantitative results...
-\end{itemize}
-
-\subsection{Summary}
-\begin{itemize}
-	\item Conclusions...
-	\item Limitations...
-	\item Future work...
-\end{itemize}
-
-
-
-\bstctlcite{bstctl:etal, bstctl:nodash, bstctl:simpurl}
-\bibliographystyle{IEEEtranS}
-\bibliography{references}
-
-
-
-\section{TEMPLATE REFERENCE: KAJ IGNORE}
-\section{Preparation Instructions}
-
-\subsection{Paper Formatting}
-\label{section:formatting}
-
-There are no minimum or maximum length limits on IW reports.  
-We are including this template because we think it will be helpful
-for citing things properly and for including figures into formatted
-text.  If you are using \LaTeX~\cite{lamport94} 
-to typeset your paper, then we strongly suggest
-that you start from the template available at
-http://iw.cs.princeton.edu -- this
-document was prepared with that template.  
-If you are using a different software package to typeset your paper, 
-then you can still use this document as a reasonable sample of 
-how your report might look.  Table~\ref{table:formatting} is a suggestion
-of some formatting guidelines, as well as being an example of how to
-include a table in a Latex document.
-
-\begin{table}[hbt]
+\begin{figure}[h]
+	\caption{Radiation patterns of the Ubiquiti NanoStation M2}
+	\includegraphics{nsm2_radiation}
 	\centering
-	\begin{tabular}{|l|l|}
-		\hline
-		\textbf{Field} & \textbf{Value}\\
-		\hline
-		\hline
-		Paper size & US Letter 8.5in $\times$ 11in\\
-		\hline
-		Top margin & 1in\\
-		\hline
-		Bottom margin & 1in\\
-		\hline
-		Left margin & 1in\\
-		\hline
-		Right margin & 1in\\
-		\hline
-		Body font & 12pt\\
-		\hline
-		Abstract font & 12pt, italicized\\
-		\hline
-		Section heading font & 14pt, bold\\
-		\hline
-		Subsection heading font & 12pt, bold\\
-		\hline
-	\end{tabular}
-	\caption{Formatting guidelines. }
-	\label{table:formatting}
-\end{table}
-
-\textbf{Please ensure that you include page numbers with your
-	submission}. This makes it easier for readers to refer to
-different parts of your paper when they provide comments.
-
-We highly recommend you use bibtex for managing your references and citations.  You can add bib entries to a references.bib file throughout the semester (e.g., as you read papers) and then they will be ready for you to cite when you start writing the report.  If you use bibtex, please note that the references.bib file provided in the template example includes some format-specific incantations at the top of the file.  If you substitute your own bib file, you will probably want to include these 
-incantations at the top of it.
-
-\subsection{Citations and Footnotes}
-
-There are various reasons to cite prior work and include it as references in your bibliography.  For example, If you are improving upon 
-prior work, you should include
-a full citation for the work in the bibliography \cite{nicepaper,nicepaper2}. 
-You can also cite information that is used as background or
-explanation\cite{Salzberg:2005}.  In addition to citing scholarly papers or books, you can
-also create bibtex entries for webpages or other sources.  Many online
-databases allow you to download a premade bibtex entry for each paper
-you access.  You can simply copy-paste these into your references.bib
-file.
-
-Sometimes you want to footnote something, such as a web
-site.\footnote{http://www.cs.princeton.edu}  Note that the footnote
-number comes after the punctuation.
-
-\subsection{Figures and Tables.}
-
-Figure \ref{fig:gray} shows an example of how to include a figure in
-your report.  
-Ensure that the figures and
-tables are legible.  Please also ensure that you refer to your
-figures in the main text. Make sure that your figures will be legible
-in the expected forms that the report will be read.  If you expect someone
-to print it out in gray-scale, then make sure the figures are legible 
-when printed that way.  
-
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=0.75\linewidth]{gray.jpg}
-	\caption{This is a gray image.}
-	\label{fig:gray}
 \end{figure}
 
-In Section~\ref{section:formatting}, an example of a table was given.
-(Note that the ``S'' in Section is capitalized.  Here's one more
-example - see Table~\ref{table:data}.
+Ubiquiti transmitters also allow for fast and easy configuration through the built-in airOS operating system. The airOS interface is accessed through a web browser and allows the user to change the operating mode of the device, the channel width, and the center frequency of the device; these parameters will be varied during the experimentation phase. For this implementation the Ubiquiti transmitter will receive power-over-ethernet (PoE) from a portable power supply and PoE adapter. The transmitter will also be mounted on a telescoping tripod, which will allow us to experiment with the transmitter at various heights if it's not possible to move between floors.
 
-\begin{table}[hbt]
+\subsection{Receiver Apparatus Overview}
+The design of the receiver apparatus was heavily constrained by weight. In total, the receiver apparatus weighted (TODO: X). If we were to mount the apparatus on a drone, it would certainly need to be light enough for the drone to fly and be controlled reliably. Another important constraint was the ability to interface with the equipment, since the various dimensions of the collected data needed to be logged for later analysis.
+
+The receiver apparatus had to accomplish several key functions in order to gather the 3-D data required to meet the primary research goal. At a high level, the receiver apparatus would need to simultaneously log signal strength and GPS measurements, joining these measurements together as single rows of data. Then, height data could be joined to provide the basis for constructing a 3-D map of wireless signal propagation in a given area; analyzing the data from this map could inform best practices for transmitter and/or receiver placement in various urban settings.
+
+The receiver apparatus was built on cardboard and contained a Raspberry Pi, spectrum analyzer, GPS module, GPS external antenna, and a portable battery pack; a measurement and logging script ran on the Raspberry Pi. The following sections describe each of these design elements in more detail.
+
+\begin{figure}[h]
+	\caption{Layout of the receiver apparatus, which is to be mounted on a DJI Phantom 3 drone.}
+	\includegraphics{apparatus}
 	\centering
-	\begin{tabular}{|l|l|} \hline
-		\textbf{Some field} & \textbf{Another field}\\\hline
-		200          &  10000 \\ \hline 
-		400          &  20000 \\ \hline 
-		800          &  40000 \\ \hline 
-		1600        &  80000 \\ \hline 
-		3200        &  160000 \\ \hline 
-		6400        &  320000 \\ \hline 
-	\end{tabular}
-	\caption{Some data in a table. }
-	\label{table:data}
-\end{table}
-
-
-Here's an example that shows how you can have side-by-side figures -
-see Figure~\ref{fig:side-a} and Figure~\ref{fig:side-b}.  (Note that
-the the ``F'' in Figure is capitalized. 
-
-\begin{figure}[htbb]
-	\begin{minipage}[b]{0.5\linewidth}
-		\centering
-		\includegraphics[width=.75\linewidth]{checkerboard-squares-black-white.jpg}
-		\caption{Plain checkerboard.}
-		\label{fig:side-a}
-	\end{minipage}
-	\hspace{0.5cm}
-	\begin{minipage}[b]{0.5\linewidth}
-		\centering
-		\includegraphics[width=.75\linewidth]{swirl-squares-black-white.jpg}
-		\caption{Cool checkerboard.}
-		\label{fig:side-b}
-	\end{minipage}
 \end{figure}
 
-\subsection{Double Quotes.}
+\subsection{On-board Computing and Logging}
+A Raspberry Pi 2 Model B served as the on-board computer of the receiver apparatus. The Raspberry Pi was selected for it's versatile interfacing options and expandable flash storage, as well as it's very light weight (TODO: weight), power efficient design (200mA operating current). Specifically, the Model B has 4 built-in USB ports as well as 40 General Purpose Input/Output (GPIO) pins. This meant that we could connect multiple pieces of equipment to the apparatus and also maintain the ability to finely configure equipment by connecting via GPIO. The Pi ran a Raspbian Jessie operating system mounted on a 64 GB SD card, which stored the collected data. To power the Raspberry Pi, a lightweight (254 g) battery with a max output of 5V, 3.4 Amps was used. 
 
-Latex double quotes are not the same as the double quote key on your
-keyboard. The standard way of writing quotes and double quotes in
-LaTeX is with `` and '' not with " and ".   
+\subsection{Spectrum Analyzer}
+The receiver apparatus needed to have an actual receiver to measure the strength of wireless signals in the 2.4GHz. This project used the RF Explorer handheld spectrum analyzer, a lightweight spectrum analyzer (185g) that can run off it's own internal battery [cite Seeedstudio].\\
+To collect data from the RF Explorer, the RF Explorer was connected to a Raspberry Pi(see "Logging and Compute") with a serial connection over USB. The RF explorer sends bits over the serial connection; these bits are structured as "sweeps" of signal measurement data. On each sweep, RF Explorer sends the measured signal strength for frequencies from 2412 MHz to 2472 MHz, which correspond to the center frequencies of channel 1 and channel 13 under the 2.4 GHz Wi-Fi protocols.
 
-Now that may be confusing, so you may want to use the \textbackslash\{quotes\} command.  For
-example \quotes{The quick brown fox.}
+RF-Explorer-For-Python (RFEP) is a Python library with an API for detecting, connecting to, and reading from an RF Explorer device. Upon instantiating a RFECommunicator object provided by RFEP, the user can connect to the RF Explorer by configuring the RFECommunicator connection as a serial connection with the appropriate USB device port. The RFECommunicator then provides utility functions to read sweeps of data, returned as arrays of length [TODO: X] with frequency steps of [TODO: Y] MHz. This functionality will allow us to simultaneously gather and log signal strength data across the transmitting frequencies of our PtMP link, as determined by the transmitter's configured center frequency and channel width.
+
+\subsection{GPS Module}
+GPS positional measurement would be required to construct the 3-Dimensional map of signal propagation. While the drone being used to perform the data, the DJI Phantom 4, logs its own on-board GPS data, the receiver apparatus needed its own dedicated GPS logging to coordinate the simultaneous logging of both signal strength measurements and GPS coordinates; using dedicated modules connected to the same Raspberry Pi would be the most straightforward implementation choice to accomplish this. Additionally, the GPS module would have to be very sensitive as the 3-Dimensional signal propagation maps would be constructed around urban features; in order for the maps to be insightful, positional data would need to be sensitive to a few feet.
+
+The Adafruit Ultimate GPS Breakout board was used, which featured 10 Hz updates and weighed only 3.5g. It also operated with a very low current draw of 25mA. The Breakout could only be interfaced through a universal asynchronous receiver/transmitter (UART) device; the Raspberry Pi was connected to the GPS UART using the Pi's GPIO pins, establishing a serial connection. With weight and connectivity accounted for, the GPS module still needed to be accurate at high resolution. Through initial testing runs, the GPS Breakout board on it's own proved to be inaccurate. To provide additional signal gain and increase the reliability of positional data, the Adafruit external GPS antenna was added to the receiver apparatus.  
+
+\subsection{Measurement and Logging Script}
+In order to construct the 3-Dimensional map of signal propagation, the receiver apparatus would need to simultaneously gather data from the spectrum analyzer and the GPS module and log this data in the Raspberry Pi's onboard filesystem. As mentioned earlier, both the spectrum analyzer and GPS module communicate with the Pi over serial connections; this posed a challenge because of two separate methods used to read serial data that was being transmitted at different baud rates.
+
+First, data from the RF Explorer was collected at 50000 baud via the USB serial connection using the RFECommunicator object from the RFEP library. The RFECommunicator object featured several convenient utility methods to get parsed signal strength data in an array. The GPS module, however, was connected to the Raspberry via the GPIO pins; data from the Adafruit GPS Breakout module was collected at 9600 baud using the pySerial library. These approaches worked in isolation but resulted in an infinitely hanging process when combined
+
+Based on specifics of the libraries being used, it was cumbersome to read from both serial connections in the same process. Specifically, the methods used were blocking on their respective serial ports. This was an issue because the two devices were sending data at different baud rates; accommodating a blocking read from either device, would result in not reading some amount of serial bits from the other device. To avoid this issue, the measurement script read from the RFExplorer's serial port and spawned a child thread to read from the GPS via Python's Threading library. Then, global variables for relevant GPS data were initialized in the parent thread and the spawned GPS thread would simply populate these global variables as data was available on the serial connection.
+
+Data was logged in the parent process after every new sweep of data is received from the RF Explorer. Because of the multi-threading approach, the process logs the most recently collected GPS data. Data is logged as rows in a CSV file in the following format: \texttt{time, frequency, dBm, latitude, longitude}. Time corresponds to how long the script has been running, while latitude and longitude are positional coordinates in degrees and minutes format. The script takes arguments to determine for which frequencies to record measured signal strength values (in dBm); the script takes the transmitters center frequency and channel width as arguments. For each signal strength measurement that falls within this band of frequencies, the script logs a row of data.  
+
+\subsection{Drone and Mounting}
+The assembled receiver apparatus would have to be mounted on a drone; the apparatus could then be piloted around and between urban features to construct a 3-Dimensional map of signal strength. The DJI Phantom 3 Professional was selected as the drone of choice because of it's reliability, adequate load capacity, wealth of documentation and ease of use. DJI is viewed as the standard in consumer drone technology and is known to produce reliable drones. The Phantom 3 is 
+
+\subsection{Testing: Drone and Apparatus}
 
 
 
-\subsection{Main Body.}
 
-Avoid bad page or column breaks in
-your main text, i.e., last line of a paragraph at the top of a
-column or first line of a paragraph at the end of a column. If you
-begin a new section or sub-section near the end of a column,
-ensure that you have at least two (2)  lines of body text on the same
-column. 
-
-
-
-
-
+\subsection{}
 \end{document}
 
