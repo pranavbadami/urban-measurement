@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 APR 2017 01:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 APR 2017 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -963,7 +963,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.99591pt on input line 40.
 
-<figures/comparison.png, id=64, 501.875pt x 342.27875pt>
+<figures/comparison.png, id=68, 501.875pt x 342.27875pt>
 File: figures/comparison.png Graphic file (type png)
 
 <use figures/comparison.png>
@@ -980,65 +980,77 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2 <./figures/comparison.png>] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+[2 <./figures/comparison.png>] [3]
+<figures/related_work.png, id=89, 376.40625pt x 150.5625pt>
+File: figures/related_work.png Graphic file (type png)
+
+<use figures/related_work.png>
+Package pdftex.def Info: figures/related_work.png used on input line 67.
+(pdftex.def)             Requested size: 376.40532pt x 150.56212pt.
+ [4] [5 <./figures/related_work.png>] [6]
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-<figures/measurement_goal.png, id=89, 331.2375pt x 187.70125pt>
+<figures/measurement_goal.png, id=109, 331.2375pt x 187.70125pt>
 File: figures/measurement_goal.png Graphic file (type png)
 
 <use figures/measurement_goal.png>
-Package pdftex.def Info: figures/measurement_goal.png used on input line 74.
+Package pdftex.def Info: figures/measurement_goal.png used on input line 96.
 (pdftex.def)             Requested size: 331.23668pt x 187.70079pt.
- [5 <./figures/measurement_goal.png>]
-[6] <figures/nsm2_radiation.png, id=100, 326.21875pt x 321.2pt>
+ [8 <./figures/measurement_goal.png>]
+[9] <figures/nsm2_radiation.png, id=120, 326.21875pt x 321.2pt>
 File: figures/nsm2_radiation.png Graphic file (type png)
 
 <use figures/nsm2_radiation.png>
-Package pdftex.def Info: figures/nsm2_radiation.png used on input line 92.
+Package pdftex.def Info: figures/nsm2_radiation.png used on input line 114.
 (pdftex.def)             Requested size: 326.21794pt x 321.19922pt.
- [7 <./figures/nsm2_radiation.png>]
-<figures/apparatus.png, id=108, 250.9375pt x 196.735pt>
+ [10 <./figures/nsm2_radiation.png>]
+<figures/apparatus.png, id=127, 250.9375pt x 196.735pt>
 File: figures/apparatus.png Graphic file (type png)
 
 <use figures/apparatus.png>
-Package pdftex.def Info: figures/apparatus.png used on input line 107.
+Package pdftex.def Info: figures/apparatus.png used on input line 129.
 (pdftex.def)             Requested size: 250.93687pt x 196.7345pt.
- [8 <./figures/apparatus.png>] [9] [10]
-LaTeX Font Info:    Try loading font information for T1+pcrs on input line 132.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11] [12 <./figures/apparatus.png>] [13]
+LaTeX Font Info:    Try loading font information for T1+pcrs on input line 154.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/courier-scaled/t1pcrs.fd
 File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
 )
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
-(Font)              scaled to size 10.5pt on input line 132.
+(Font)              scaled to size 10.5pt on input line 154.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `pcrs' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
+[14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
+ [15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4BD4A502CE359417837FA654570CFBAB;3057.
+(rerunfilecheck)             Checksum: 21F1D6294DE28C9026524B0AABAAA020;3353.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14661 strings out of 493089
- 214691 string characters out of 6134842
+ 14676 strings out of 493089
+ 214926 string characters out of 6134842
  333930 words of memory out of 5000000
- 17750 multiletter control sequences out of 15000+600000
- 43465 words of font info for 148 fonts, out of 8000000 for 9000
+ 17755 multiletter control sequences out of 15000+600000
+ 43711 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,7n,40p,1307b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1047,10 +1059,10 @@ exlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on thesis.pdf (12 pages, 282005 bytes).
+Output written on thesis.pdf (15 pages, 564681 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 25229 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 184 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 25242 words of extra memory for PDF output out of 29859 (max. 10000000)
 
