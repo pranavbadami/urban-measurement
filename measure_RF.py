@@ -23,7 +23,7 @@ BAUDRATE = 500000
 SERIALPORT = "/dev/ttyUSB0"
 objRFE = RFExplorer.RFECommunicator()	  #Initialize object and thread
 objRFE.m_arrValidCP2102Ports = [s for s in serial.tools.list_ports.comports() if s.device == SERIALPORT]
-TOTAL_SECONDS = 5			 #Initialize time span to display activity
+#TOTAL_SECONDS = 120			 #Initialize time span to display activity
 MIN_FREQ = 0
 MAX_FREQ = 0
 STEP_FREQ = 0
@@ -85,6 +85,30 @@ def signal_strength(objRFE, freq):
 		return objSweepTemp.m_arrAmplitude[index]	
 
 
+def log_data(objRFE, writer): 
+	global MIN_FREQ
+	global MAX_FREQ
+	global STEP_FREQ
+	
+	nInd = objRFE.SweepData.Count - 1
+	objSweepTemp = objRFE.SweepData.GetData(nInd)
+	
+	now = datetime.now() - timedelta(hours=3)
+	
+	#initialize constants, if needed
+	if not MIN_FREQ:
+		MIN_FREQ = objSweepTemp.m_fStartFrequencyMHZ
+		STEP_FREQ = objSweepTemp.m_fStepFrequencyMHZ
+		MAX_FREQ = MIN_FREQ + STEP_FREQ*(len(objSweepTemp.m_arrAmplitude)-1)
+		#MAX_FREQ = round(MAX_FREQ, 0)
+
+	for index, signal in enumerate(objSweepTemp.m_arrAmplitude):
+		if not (index % 3):
+			freq = int(round(MIN_FREQ + index*STEP_FREQ))
+			row = {'time': now, 'freq': freq, 'dBm': signal}
+			writer.writerow(row)
+
+
 #---------------------------------------------------------
 # Main processing loop
 #---------------------------------------------------------
@@ -95,12 +119,6 @@ try:
 
 	#Connect to available port
 	if (objRFE.ConnectPort(SERIALPORT, BAUDRATE)):
- 
-		#open log file
-		fields = ['frequency', 'dBm']
-		
-		writer = csv.DictWriter(log, fieldnames=fields)
-		writer.writeheader()
 
 		#Reset the unit to start fresh
 		objRFE.SendCommand("r")
@@ -118,25 +136,25 @@ try:
 
 		#If object is an analyzer, we can scan for received sweeps
 		if (objRFE.IsAnalyzer()):
-			print("Receiving data...")
-			
+			print("Receiving data...")		
 
-			log = open('~/data/test' + '.csv', 'w')
+			fields = ['time', 'freq', 'dBm']
+			start_time = datetime.now().strftime('%m_%d_at_%H_%M')
+			log = open('/home/pi/data/test_' + start_time +  '.csv', 'w')
+			writer = csv.DictWriter(log, fieldnames=fields)			
 
 			#Process until we complete scan time
 			nLastDisplayIndex=0
 			startTime=datetime.now()
 			
-			while ((datetime.now() - startTime).seconds<TOTAL_SECONDS):    
+			#while ((datetime.now() - startTime).seconds<TOTAL_SECONDS):    
+			while True:
 				#Process all received data from device 
 				objRFE.ProcessReceivedString(True)
+				
 				#Log data if received new sweep only
 				if (objRFE.SweepData.Count>nLastDisplayIndex):
-					dBm = signal_strength(objRFE, center_fq)
-					PrintData(objRFE)
-					if dBm is None:
-						break
-					writer.writerow({'frequency': center_fq, 'dBm': dBm})
+					log_data(objRFE, writer)
 				nLastDisplayIndex=objRFE.SweepData.Count
 		else:
 			print("Error: Device connected is a Signal Generator. \nPlease, connect a Spectrum Analyzer")
@@ -148,6 +166,7 @@ except Exception as obEx:
 #---------------------------------------------------------
 # Close object and release resources
 #---------------------------------------------------------
-
+if nLastDisplayIndex is not None:
+	print("points", nLastDisplayIndex)
 objRFE.Close()	  #Finish the thread and close port
 objRFE = None 
