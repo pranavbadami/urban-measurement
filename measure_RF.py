@@ -142,11 +142,14 @@ try:
 			start_time = datetime.now().strftime('%m_%d_at_%H_%M')
 			log = open('/home/pi/data/test_' + start_time +  '.csv', 'w')
 			writer = csv.DictWriter(log, fieldnames=fields)			
+			writer.writeheader()
 
 			#Process until we complete scan time
 			nLastDisplayIndex=0
 			startTime=datetime.now()
-			
+			collectionSize = objRFE.m_SweepDataContainer.m_nInitialCollectionSize
+			print("Collection size: ", collectionSize)
+
 			#while ((datetime.now() - startTime).seconds<TOTAL_SECONDS):    
 			while True:
 				#Process all received data from device 
@@ -156,6 +159,9 @@ try:
 				if (objRFE.SweepData.Count>nLastDisplayIndex):
 					log_data(objRFE, writer)
 				nLastDisplayIndex=objRFE.SweepData.Count
+				if (nLastDisplayIndex == collectionSize):
+					objRFE.m_SweepDataContainer.CleanAll()
+					nLastDisplayIndex = 0
 		else:
 			print("Error: Device connected is a Signal Generator. \nPlease, connect a Spectrum Analyzer")
 	else:
