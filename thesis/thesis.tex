@@ -100,10 +100,12 @@ The analysis framework we propose allows us to normalize and compare these compl
 
 The remainder of this work discusses how the technological stack required by this approach was designed and built, and then proceeds to detail the methods of data collection and experimentation. Finally, it attempts to show how the proposed spatial aggregation analysis can inform better mesh network design in the future.
 
-\section{Implementation}
+\section{Implementation: Point Cloud of Signal Strength Measurements}
 Several implementation challenges presented themselves as we began to work towards the primary research goal. The following sections describe how we built the various components required to construct a 3-D point cloud of signal strength measurements. Mainly, transmitter configuration and receiver apparatus design are  important design choices for any measurement campaign. The receiver apparatus had to measure and record signal strength over time and, importantly, be mountable on the drone. The drone then had to safely and autonomously fly with the measurement apparatus attached. The spatial data recorded by the drone had to be joined with the data collected by the receiver apparatus to generate the 3-D point cloud.
 
-\subsection{Transmitter Selection and Configuration}
+\subsection{Part 1: Transmitting a Wireless Signal}
+
+\subsubsection{Transmitter Selection}
 Since this project was focused on measuring the performance of wireless networks in urban environments, it was imperative to choose a transmitter which would be typically used in an urban setting. Consider a mesh network configuration in a town such as Princeton. This mesh network would need to meet several key criteria. First, it would need to have a way to connect to the wired Internet at some wired gateway, which could be many miles away or even in another town altogether. One reasonable way to establish this connection would be with the use of high-throughput, carrier-grade, long-range backhaul links which can establish wireless connections at ranges upwards of 100 km [Ubiquiti cite].
 
 End users of the mesh network living in Princeton would not be connecting directly to these backhaul links, however. Backhaul links would need to be placed at high elevations and meticulously aligned with one another to establish a LOS connection. It may be impossible for users to establish LOS connections with backhaul links because users will often have windows or roofs with obstructed views; further, they will also have pyhsically smaller, lower power antennas where they may not be able to transmit to a distant backhaul link.
@@ -118,7 +120,31 @@ For this project, the Ubiquiti NanoStation M2 will be used; the NSM2 is a PtMP l
 	\centering
 \end{figure}
 
+\subsubsection{Transmitter Selection}
+
 Ubiquiti transmitters also allow for fast and easy configuration through the built-in airOS operating system. The airOS interface is accessed through a web browser and allows the user to change the operating mode of the device, the channel width, and the center frequency of the device; these parameters will be varied during the experimentation phase. For this implementation the Ubiquiti transmitter will receive power-over-ethernet (PoE) from a portable power supply and PoE adapter. The transmitter will also be mounted on a telescoping tripod, which will allow us to experiment with the transmitter at various heights if it's not possible to move between floors.
+
+\subsection{Part 2: Measuring Wireless Signals in 3-D}
+In order to create a 3-D point cloud of signal strength measurements, measured values need to be combined with 3-D spatial data. Two major implementation components are needed to achieve this goal. First, a drone is required to collect spatial data across various planes at many different heights. A signal measurement apparatus which can detect signals  across the 2.4GHz spectrum and then record these measurements is also needed. If this apparatus can somehow be mounted on the drone, we could feasibly gather wireless signal data throughout a 3-D space. The data collected on these separate devices  can then be joined into a single data set representing the 3-D point cloud of signal strength measurements. 
+
+\subsubsection{3-Dimensional Data: Collected via Drone}
+Collecting precise and accurate spatial data would only be possible if a reliable  drone with state-of-the-art battery life could both log flight data and be autonomously controlled. Autonomous control is imperative to fly the drone in specific flight patterns, which can be overlayed on each other to produce the robust, complete dataset required for the 3-D point cloud. The DJI Phantom 3 Advanced is a "pro-sumer" drone which produces incredibly precise spatial data using multiple built-in stability and guidance systems. DJI is a world-leader in producing drones for hobbyists as well as professionals. While other companies such as Parrot Drones sell devices with open-source hardware and software for increased customizability, this project used a DJI drone which was less customizable but more reliable. Reliability and fault-tolerance was a key consideration because drone flights would be conducted in urban settings more prone to signal interference where drone failure could cause harm to property or people. Further, because of DJI's large market share, many third party apps leverage the extra features of the Phantom 3 Advanced that would potentially have to be created separately if another brand was used. 
+
+Battery life was an important consideration because many autonomous flights would have to be conducted in a given space, each lasting several minutes. With an approximate 23 minutes of flight time out of the box, the P3A offers one of the longest flight times available in the consumer drone space. The P3A was used instead of the Phantom 4, a more recent model, because it has has a removable camera gimbal which was leveraged to build a mounting bracket housing the measurement apparatus (see Measurement Apparatus section, Mounting section). 
+
+\subsubsection{Spatial Data Collection}
+The P3A features an optical stabilization system for micro-level positional adjustments and a robust satellite positioning system for macro-level navigation purposes. DJI's "Vision Positioning System" (VPS) features two ultrasonic sensors and a monocular camera on the bottom-side of the drone.These sensors are always-on and the P3A uses the ultrasonic devices to measure distance from the ground and the camera to identify patterns under the drone; this input can be used to stabilize the drone such that it can hover in place or closely follow a pre-defined path. On the other hand, the P3A's satellite positioning system uses both GPS and GLONASS (the Russian satellite network) to provide geographic location services. The inclusion of GLONASS effectively doubles the number of satellites the P3A can fix onto; throughout testing and experimentation, the P3A was regularly fixed with 14+ satellites, providing robust, 1 meter accuracy. The geographic coordinates and the height measurements gathered by the satellite position system and VPS, respectively, are logged on automatically created flight logs and also transmitted to the drone's controller in real-time.
+
+\subsubsection{Precision and Automation: Litchi iOS app}
+Many third-party apps take advantage of these systems to provide autonomous navigation on the P3A. Litchi is an app which features a "Waypoint" mode where users can construct a path out of waypoints for the drone to follow. Custom heights and speeds can also be set for the waypoints; the drone's heading can also be manually controlled along the route. Specifically, Litchi allows the user to control the drone's heading using "points of interest"; for this project, the location of the transmitter will be a POI the drone will orient towards. At the start of a waypoint mission, the entire path is wirelessly uploaded to the drone which performs an auto-takeoff maneuver to begin the autonomous mission. The drone travels from it's starting location to the first waypoint and continues to follow the path until it reaches the last waypoint. 
+
+\begin{figure}[h]
+	\caption{Left: Waypoint mode in the Litchi app, viewing a mission. Purple markers denote the waypoints, which the drone will traverse in numbered order. The clouds above each marker indicate the height the drone should assume at a given waypoint. The opaque blue paper airplanes under the waypoints indicate the drone's heading. The blue marker is a point of interest. Right: Path followed by the drone during a test of this waypoint mission; the drone took from the H (home) marker. Note that waypoints are separated by < 16 ft, demonstrating the granular position control of Waypoint mode.}
+	\includegraphics{waypoint}
+	\centering
+\end{figure}
+
+
 
 \subsection{Receiver Apparatus Overview}
 The design of the receiver apparatus was heavily constrained by weight. In total, the receiver apparatus weighted (TODO: X). If we were to mount the apparatus on a drone, it would certainly need to be light enough for the drone to fly and be controlled reliably. Another important constraint was the ability to interface with the equipment, since the various dimensions of the collected data needed to be logged for later analysis.
@@ -138,9 +164,11 @@ A Raspberry Pi 2 Model B served as the on-board computer of the receiver apparat
 
 \subsection{Spectrum Analyzer}
 The receiver apparatus needed to have an actual receiver to measure the strength of wireless signals in the 2.4GHz. This project used the RF Explorer handheld spectrum analyzer, a lightweight spectrum analyzer (185g) that can run off it's own internal battery [cite Seeedstudio].\\
-To collect data from the RF Explorer, the RF Explorer was connected to a Raspberry Pi(see "Logging and Compute") with a serial connection over USB. The RF explorer sends bits over the serial connection; these bits are structured as "sweeps" of signal measurement data. On each sweep, RF Explorer sends the measured signal strength for frequencies from 2412 MHz to 2472 MHz, which correspond to the center frequencies of channel 1 and channel 13 under the 2.4 GHz Wi-Fi protocols.
+To collect data from the RF Explorer, the RF Explorer was connected to a Raspberry Pi(see "Logging and Compute") with a serial connection over USB. The RF explorer sends bits over the serial connection; these bits are structured as "sweeps" of signal measurement data. On each sweep, RF Explorer sends the measured signal strength for frequencies from 2412 MHz to 2472 MHz[EDIT], which correspond to the center frequencies of channel 1 and channel 13 under the 2.4 GHz Wi-Fi protocols.
 
 RF-Explorer-For-Python (RFEP) is a Python library with an API for detecting, connecting to, and reading from an RF Explorer device. Upon instantiating a RFECommunicator object provided by RFEP, the user can connect to the RF Explorer by configuring the RFECommunicator connection as a serial connection with the appropriate USB device port. The RFECommunicator then provides utility functions to read sweeps of data, returned as arrays of length [TODO: X] with frequency steps of [TODO: Y] MHz. This functionality will allow us to simultaneously gather and log signal strength data across the transmitting frequencies of our PtMP link, as determined by the transmitter's configured center frequency and channel width.
+
+[TODO: Stripping Weight off RFE]
 
 \subsection{GPS Module}
 GPS positional measurement would be required to construct the 3-Dimensional map of signal propagation. While the drone being used to perform the data, the DJI Phantom 4, logs its own on-board GPS data, the receiver apparatus needed its own dedicated GPS logging to coordinate the simultaneous logging of both signal strength measurements and GPS coordinates; using dedicated modules connected to the same Raspberry Pi would be the most straightforward implementation choice to accomplish this. Additionally, the GPS module would have to be very sensitive as the 3-Dimensional signal propagation maps would be constructed around urban features; in order for the maps to be insightful, positional data would need to be sensitive to a few feet.
@@ -148,6 +176,8 @@ GPS positional measurement would be required to construct the 3-Dimensional map 
 The Adafruit Ultimate GPS Breakout board was used, which featured 10 Hz updates and weighed only 3.5g. It also operated with a very low current draw of 25mA. The Breakout could only be interfaced through a universal asynchronous receiver/transmitter (UART) device; the Raspberry Pi was connected to the GPS UART using the Pi's GPIO pins, establishing a serial connection. With weight and connectivity accounted for, the GPS module still needed to be accurate at high resolution. Through initial testing runs, the GPS Breakout board on it's own proved to be inaccurate. To provide additional signal gain and increase the reliability of positional data, the Adafruit external GPS antenna was added to the receiver apparatus.  
 
 \subsection{Measurement and Logging Script}
+[TODO: Rework]
+
 In order to construct the 3-Dimensional map of signal propagation, the receiver apparatus would need to simultaneously gather data from the spectrum analyzer and the GPS module and log this data in the Raspberry Pi's onboard filesystem. As mentioned earlier, both the spectrum analyzer and GPS module communicate with the Pi over serial connections; this posed a challenge because of two separate methods used to read serial data that was being transmitted at different baud rates.
 
 First, data from the RF Explorer was collected at 50000 baud via the USB serial connection using the RFECommunicator object from the RFEP library. The RFECommunicator object featured several convenient utility methods to get parsed signal strength data in an array. The GPS module, however, was connected to the Raspberry via the GPIO pins; data from the Adafruit GPS Breakout module was collected at 9600 baud using the pySerial library. These approaches worked in isolation but resulted in an infinitely hanging process when combined
@@ -156,14 +186,6 @@ Based on specifics of the libraries being used, it was cumbersome to read from b
 
 Data was logged in the parent process after every new sweep of data is received from the RF Explorer. Because of the multi-threading approach, the process logs the most recently collected GPS data. Data is logged as rows in a CSV file in the following format: \texttt{time, frequency, dBm, latitude, longitude}. Time corresponds to how long the script has been running, while latitude and longitude are positional coordinates in degrees and minutes format. The script takes arguments to determine for which frequencies to record measured signal strength values (in dBm); the script takes the transmitters center frequency and channel width as arguments. For each signal strength measurement that falls within this band of frequencies, the script logs a row of data.  
 
-\subsection{Drone and Mounting}
-The assembled receiver apparatus would have to be mounted on a drone; the apparatus could then be piloted around and between urban features to construct a 3-Dimensional map of signal strength. The DJI Phantom 3 Professional was selected as the drone of choice because of it's reliability, adequate load capacity, wealth of documentation and ease of use. DJI is viewed as the standard in consumer drone technology and is known to produce reliable drones. The Phantom 3 is 
 
-\subsection{Testing: Drone and Apparatus}
-
-
-
-
-\subsection{}
 \end{document}
 
