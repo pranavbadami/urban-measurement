@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 APR 2017 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 APR 2017 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -963,7 +963,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.99591pt on input line 40.
 
-<figures/comparison.png, id=88, 501.875pt x 342.27875pt>
+<figures/comparison.png, id=92, 501.875pt x 342.27875pt>
 File: figures/comparison.png Graphic file (type png)
 
 <use figures/comparison.png>
@@ -981,14 +981,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2 <./figures/comparison.png>] [3]
-<figures/related_work.png, id=109, 376.40625pt x 150.5625pt>
+<figures/related_work.png, id=113, 376.40625pt x 150.5625pt>
 File: figures/related_work.png Graphic file (type png)
 
 <use figures/related_work.png>
 Package pdftex.def Info: figures/related_work.png used on input line 67.
 (pdftex.def)             Requested size: 376.40532pt x 150.56212pt.
  [4] [5 <./figures/related_work.png>] [6]
-[7] <figures/measurement_goal.png, id=129, 501.875pt x 121.95563pt>
+[7] <figures/measurement_goal.png, id=133, 501.875pt x 121.95563pt>
 File: figures/measurement_goal.png Graphic file (type png)
 
 <use figures/measurement_goal.png>
@@ -1000,7 +1000,7 @@ Overfull \hbox (32.11874pt too wide) in paragraph at lines 94--96
  []
 
 [8 <./figures/measurement_goal.png>] [9]
-<figures/nsm2_radiation.png, id=140, 326.21875pt x 321.2pt>
+<figures/nsm2_radiation.png, id=144, 326.21875pt x 321.2pt>
 File: figures/nsm2_radiation.png Graphic file (type png)
 
 <use figures/nsm2_radiation.png>
@@ -1011,7 +1011,7 @@ Package pdftex.def Info: figures/nsm2_radiation.png used on input line 119.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10] [11 <./figures/nsm2_radiation.png>] [12]
-<figures/waypoint.png, id=155, 501.875pt x 177.16188pt>
+<figures/waypoint.png, id=159, 501.875pt x 177.16188pt>
 File: figures/waypoint.png Graphic file (type png)
 
 <use figures/waypoint.png>
@@ -1026,7 +1026,7 @@ Overfull \hbox (32.11874pt too wide) in paragraph at lines 143--145
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [13] [14 <./figures/waypoint.png>]
-<figures/apparatus.png, id=168, 250.9375pt x 196.735pt>
+<figures/apparatus.png, id=172, 250.9375pt x 196.735pt>
 File: figures/apparatus.png Graphic file (type png)
 
 <use figures/apparatus.png>
@@ -1050,25 +1050,25 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-[18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
- [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
+[18] [19] [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
+ [21]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1CD0F4E5D2E97937552CEE7756EED271;5086.
+(rerunfilecheck)             Checksum: FEB6A318EE73927BC5DA2971D7912AF7;5326.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14706 strings out of 493089
- 215451 string characters out of 6134842
+ 14710 strings out of 493089
+ 215495 string characters out of 6134842
  333930 words of memory out of 5000000
- 17771 multiletter control sequences out of 15000+600000
+ 17772 multiletter control sequences out of 15000+600000
  43841 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,7n,40p,1307b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1078,10 +1078,10 @@ exlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on thesis.pdf (19 pages, 1196635 bytes).
+Output written on thesis.pdf (21 pages, 1200278 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 25287 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 25295 words of extra memory for PDF output out of 29859 (max. 10000000)
 
