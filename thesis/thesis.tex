@@ -238,7 +238,7 @@ A set of flight paths using the "lawn mowing" approach across various heights yi
 
 Due to data on the drone and apparatus being joined on timestamps, the Rapberry Pi's clock had to be aligned to UTC-3 time (see Measurement and Logging Script) and the apparatus had to remain booted from alignment to the end of testing. In order for the Pi to log aligned data throughout the PoC, it had to be synced over a network connection and then left on en route to the testing location, where it would not be possible to connect the Pi to a network. Once the Pi was aligned, it was disconnected from the network and the measurement script was ran. This resulted in lots of extraneous data being logged when the apparatus was in transit; since the Pi had 32 GB of onboard SD card storage, however, storing large amounts of data was not a major issue. 
 
-Upon reaching the testing site, the drone was flown in a lawn mowing pattern at three heights with the RFE measuring in the 2.4 GHz ISM band. The minimum frequency of the RFE was 2406 MHz and the maximum was 2486 MHz. Flights would be performed at 6 ft, 11 ft, 17 ft and 23 ft with the drone flying at 3.5 mph. Five flights would be performed autonomously at each height to get a thorough data set over which noise could be smoothed out. Autonomous flights were performed with the drone controller on, in case manual control of the aircraft had to be regained at any point.
+Upon reaching the testing site, the drone was flown in a lawn mowing pattern at three heights with the RFE measuring in the 2.4 GHz ISM band. The minimum frequency of the RFE was 2406 MHz and the maximum was 2486 MHz. A 2dBi antenna tuned for 2450 MHz was connected to the RFE. Flights would be performed at 6 ft, 11 ft, 17 ft and 23 ft with the drone flying at 3.5 mph. Five flights would be performed autonomously at each height to get a thorough data set over which noise could be smoothed out. Autonomous flights were performed with the drone controller on, in case manual control of the aircraft had to be regained at any point.
 
 In total, 18 flights across the 4 heights were performed. Despite the P3A having state-of-the-art battery life, the drone reached critical battery levels and performed an auto-landing at the configured battery life threshold (see Limitations). The measurement apparatus was left on for the duration of testing, which lasted 2 hours and 1 minute, accounting for transit, setup and flight time. 
 
@@ -257,7 +257,14 @@ Since data sets have to be joined on equal column values, the timestamps in spat
 Once timestamps were aligned across the datasets, an inner join was performed to join the data sets. An inner join was preferred so that empty rows resulting from an outer join with only spatial or spectral data could be avoided in practice. Aligning the timestamps with each other resulted in > 99\% of spectral data rows being included in the final joined data set. The size and update rate of the resulting dataset was limited by the slower update rate (~5 Hz) of the RFE. Since the P3A was flown at a speed of 3.5 mph, an update rate of 5 Hz translates to consecutive data points being spaced about 1 ft apart. 
 
 \subsection{Visualizing the Point Cloud}
-Once the spectral and spatial data were joined, the dataset underlying the point cloud was complete and ready for visualization and further analysis. The latitude and longitude columns of the dataset were 
+Once the spectral and spatial data were joined, a few small tweaks and additions were needed to add context to the dataset. The latitude and longitude columns of the dataset were normalized to feet for consistency with the height data with the minimum values corresponding to 0 ft. Further, before plotting, an additional row with populated spatial fields and null spectral fields was added to indicate the position of the drone controller (and operator) relative to the measured space. 
+
+With these modifications, the joined data was ready for visualization and analysis. A 3-D scatter plot\footnote{Plots produced for this work are interactive and will be hosted online using plotly at links in the footnote, pointed to by figure captions.} was constructed using Plotly, where points were colored relative to the maximum and minimum signal strength values measured during the test flights. 
+\begin{figure}[!h]
+ 	\caption{PoC1}
+ 	\includegraphics{PoC_1}
+ 	\centering
+\end{figure}
 
 \end{document} 
 

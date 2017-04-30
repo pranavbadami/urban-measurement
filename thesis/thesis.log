@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 APR 2017 14:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 APR 2017 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -963,7 +963,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.99591pt on input line 40.
 
-<figures/comparison.png, id=100, 501.875pt x 342.27875pt>
+<figures/comparison.png, id=104, 501.875pt x 342.27875pt>
 File: figures/comparison.png Graphic file (type png)
 
 <use figures/comparison.png>
@@ -981,14 +981,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2 <./figures/comparison.png>] [3]
-<figures/related_work.png, id=121, 376.40625pt x 150.5625pt>
+<figures/related_work.png, id=125, 376.40625pt x 150.5625pt>
 File: figures/related_work.png Graphic file (type png)
 
 <use figures/related_work.png>
 Package pdftex.def Info: figures/related_work.png used on input line 67.
 (pdftex.def)             Requested size: 376.40532pt x 150.56212pt.
  [4] [5 <./figures/related_work.png>] [6]
-[7] <figures/measurement_goal.png, id=141, 501.875pt x 121.95563pt>
+[7] <figures/measurement_goal.png, id=145, 501.875pt x 121.95563pt>
 File: figures/measurement_goal.png Graphic file (type png)
 
 <use figures/measurement_goal.png>
@@ -1000,7 +1000,7 @@ Overfull \hbox (32.11874pt too wide) in paragraph at lines 94--96
  []
 
 [8 <./figures/measurement_goal.png>] [9]
-<figures/nsm2_radiation.png, id=152, 326.21875pt x 321.2pt>
+<figures/nsm2_radiation.png, id=156, 326.21875pt x 321.2pt>
 File: figures/nsm2_radiation.png Graphic file (type png)
 
 <use figures/nsm2_radiation.png>
@@ -1011,7 +1011,7 @@ Package pdftex.def Info: figures/nsm2_radiation.png used on input line 119.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10] [11 <./figures/nsm2_radiation.png>] [12]
-<figures/waypoint.png, id=168, 501.875pt x 177.16188pt>
+<figures/waypoint.png, id=172, 501.875pt x 177.16188pt>
 File: figures/waypoint.png Graphic file (type png)
 
 <use figures/waypoint.png>
@@ -1025,7 +1025,7 @@ Overfull \hbox (32.11874pt too wide) in paragraph at lines 143--145
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/flight_log.png, id=169, 330.23375pt x 80.3pt>
+<figures/flight_log.png, id=173, 330.23375pt x 80.3pt>
 File: figures/flight_log.png Graphic file (type png)
 
 <use figures/flight_log.png>
@@ -1036,7 +1036,7 @@ Package pdftex.def Info: figures/flight_log.png used on input line 151.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [13] [14 <./figures/waypoint.png> <./figures/flight_log.png>] [15]
-<figures/apparatus.png, id=187, 250.9375pt x 196.735pt>
+<figures/apparatus.png, id=191, 250.9375pt x 196.735pt>
 File: figures/apparatus.png Graphic file (type png)
 
 <use figures/apparatus.png>
@@ -1067,21 +1067,21 @@ LaTeX Font Info:    Font shape `T1/pcrs/bx/n' in size <12> not available
 (Font)              Font shape `T1/pcrs/b/n' tried instead on input line 194.
 LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
 (Font)              scaled to size 10.5pt on input line 194.
- <figures/rfe_data.png, id=198, 401.5pt x 154.07562pt>
+ <figures/rfe_data.png, id=202, 401.5pt x 154.07562pt>
 File: figures/rfe_data.png Graphic file (type png)
 
 <use figures/rfe_data.png>
 Package pdftex.def Info: figures/rfe_data.png used on input line 195.
 (pdftex.def)             Requested size: 401.49901pt x 154.07524pt.
  [18 <./figures/rfe_data.png>] [19] [20]
-<figures/performance_comparison.png, id=218, 274.52562pt x 200.75pt>
+<figures/performance_comparison.png, id=222, 274.52562pt x 200.75pt>
 File: figures/performance_comparison.png Graphic file (type png)
 
 <use figures/performance_comparison.png>
 Package pdftex.def Info: figures/performance_comparison.png used on input line 
 219.
 (pdftex.def)             Requested size: 274.52495pt x 200.7495pt.
- [21 <./figures/performance_comparison.png>] <figures/lawn_mow_PoC.png, id=225,
+ [21 <./figures/performance_comparison.png>] <figures/lawn_mow_PoC.png, id=229,
  401.5pt x 241.40187pt>
 File: figures/lawn_mow_PoC.png Graphic file (type png)
 
@@ -1093,7 +1093,7 @@ Package pdftex.def Info: figures/lawn_mow_PoC.png used on input line 235.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [22] [23 <./figures/lawn_mow_PoC.png>]
-<figures/data_pipeline.png, id=236, 506.89375pt x 519.9425pt>
+<figures/data_pipeline.png, id=240, 506.89375pt x 519.9425pt>
 File: figures/data_pipeline.png Graphic file (type png)
 
 <use figures/data_pipeline.png>
@@ -1105,33 +1105,43 @@ Overfull \hbox (37.1375pt too wide) in paragraph at lines 253--255
  []
 
 [24] [25 <./figures/data_pipeline.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 262.
- [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 262.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 262.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 262.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 262.
+
+<figures/PoC_1.png, id=253, 255.95625pt x 301.125pt>
+File: figures/PoC_1.png Graphic file (type png)
+ <use figures/PoC_1.png>
+Package pdftex.def Info: figures/PoC_1.png used on input line 265.
+(pdftex.def)             Requested size: 255.95561pt x 301.12425pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
+[26] [27 <./figures/PoC_1.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 262.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 262.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 417785FD6E9D182ED275457170DF1981;6266.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: D45933BBAE80A4B7BF943948C07289A2;6064
-(rerunfilecheck)             After:  417785FD6E9D182ED275457170DF1981;6266.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14815 strings out of 493089
- 217376 string characters out of 6134842
+ 14894 strings out of 493089
+ 218672 string characters out of 6134842
  334930 words of memory out of 5000000
- 17842 multiletter control sequences out of 15000+600000
- 57255 words of font info for 187 fonts, out of 8000000 for 9000
+ 17898 multiletter control sequences out of 15000+600000
+ 74677 words of font info for 221 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,7n,40p,1311b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,8n,40p,1311b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
@@ -1141,10 +1151,10 @@ ist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on thesis.pdf (26 pages, 2127522 bytes).
+Output written on thesis.pdf (27 pages, 2274151 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 31992 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 43269 words of extra memory for PDF output out of 51595 (max. 10000000)
 
