@@ -8,7 +8,7 @@
 
 \usepackage[normalem]{ulem}
 \usepackage{graphicx}
-
+\usepackage{adjustbox}
 \graphicspath{ {figures/} }
 \setlength{\parindent}{4ex}
 
@@ -260,11 +260,28 @@ Once timestamps were aligned across the datasets, an inner join was performed to
 Once the spectral and spatial data were joined, a few small tweaks and additions were needed to add context to the dataset. The latitude and longitude columns of the dataset were normalized to feet for consistency with the height data with the minimum values corresponding to 0 ft. Further, before plotting, an additional row with populated spatial fields and null spectral fields was added to indicate the position of the drone controller (and operator) relative to the measured space. 
 
 With these modifications, the joined data was ready for visualization and analysis. A 3-D scatter plot\footnote{Plots produced for this work are interactive and will be hosted online using plotly at links in the footnote, pointed to by figure captions.} was constructed using Plotly, where points were colored relative to the maximum and minimum signal strength values measured during the test flights. 
+
 \begin{figure}[!h]
- 	\caption{PoC1}
+ 	\caption{Visualizing a point cloud of signal strength measurements from the 18 flights performed for the Proof-of-Concept test run. Note the flight pattern in the "Bird's Eye View", which is the real world  resulting from the Waypoint mission in Fig 10. Flights were performed at heights of 8 ft, 13 ft, 20 ft, 26 ft.}
  	\includegraphics{PoC_1}
  	\centering
 \end{figure}
+
+\subsection{Analyzing the PoC Propagation Data}
+Data collected during the PoC was gathered in the absence of a dedicated transmitter, so the point cloud measurements were representative of two sources of noise: ambient noise from the environment and transmissions from the drone controller. While the PoC was successful in terms of validating the functionality of the implementation and data processing pipeline, it also revealed large sources of noise which necessitated hardware changes moving forward.
+
+As mentioned earlier, the 2.4 GHz ISM band is overcrowded due to the many ubiquitous consumer electronic devices operating in it. Because of this, there was a consistent ambient noise level across the 2.4 GHz spectrum. The RFE is sensitive to signals as weak as -120 dBm, but signal readings of -80 dBm were extremely common across the 2.4 GHz band. For example, the mean signal strength detected at 2442 +/- 2 MHz was -87 dBm, with a $\sigma$ of just 2.9 dBm. In the point cloud, we can visualize this ambient noise as a steady sea of interference present across all spatial measurements.
+
+Beyond a base noise environmental noise level, the P3A and its controller transmit their own wireless signals for control and data transmission purpose. Since the P3A is designed with photography in mind, it uses LightBridge, DJI's proprietary data transmission protocol, to beam a live video feed from the camera to the controller. LightBridge operates in the 2.4 GHz ISM band and the P3A begins transmitting data when it establishes a preliminary connection with the controller. The frequency channel over which Lightbridge is operating can be coarsely configured; for all the experiments, Lightbridge channel 20 (2471MHz - 2482MHz) was selected. The aircraft and the controller transmit over this channel continuously and this is evident in the constantly high (> -40 dBi) point cloud measurements for frequencies falling withing the range of Lightbridge channel 20. Despite the built-in camera being disconnected and no video being available, the P3A continues to transmit data from the craft's telemetery and navigation systems in the configured Lightbridge channel. While the data transmission frequency range can be manually set, the P3A receives remote control signals from the controller at non-configurable, variable frequencies throughout the 2.4 GHz ISM band. A frequency hopping, spread spectrum (FHSS) method is used for control transmissions, where data is sent over rapidly changing frequencies between the craft and the controller, randomly hopping across the 2.4 GHz ISM band. While these transmissions are drowned out by constantly strong signals in the data broadcasting frequencies, they are briefly observable in the mid-to-lower reaches of the RFE's measured spectrum. For example, at 2412 +/- 2 MHz, the mean signal strength measurement was -87.6 dBm with a $\sigma =$2.9 MHz; however, there were 58 measurements out of 28695 that registered greater than -70 dBm. 
+
+\begin{figure}
+	\caption{Top: Point cloud representations of measurements at 2412, 2442, and 2472 MHz. Note that 2472 MHz is within the Lightbridge channel setting of the P3A controller. Evidence of high measurements due to the FHSS control signal are highlighted at lower frequencies. Bottom: Signal strength distributions at the various frequencies. Note the persistent ambient noise profiles across the 2.4 GHz band. }
+	\centerline{\includegraphics{PoC_2}}
+\end{figure}
+
+
+
+
 
 \end{document} 
 

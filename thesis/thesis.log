@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 APR 2017 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 MAY 2017 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -761,7 +761,58 @@ Option `squaren' provided!
 \ULC@box=\box32
 Package: ulem 2012/05/18
 \ULdepth=\dimen151
-) (./thesis.aux)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
+)
+\XKV@depth=\count121
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box33
+)
+\tc@llx=\dimen152
+\tc@lly=\dimen153
+\tc@urx=\dimen154
+\tc@ury=\dimen155
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen156
+\adjbox@Height=\dimen157
+\adjbox@Depth=\dimen158
+\adjbox@Totalheight=\dimen159
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count122
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box34
+\sift@deathcycles=\count123
+\@vwid@loff=\dimen160
+\@vwid@roff=\dimen161
+))
+(./thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -793,19 +844,19 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
-\scratchdimen=\dimen152
-\scratchbox=\box33
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count124
-\MPscratchDim=\dimen153
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count124
+\scratchdimen=\dimen162
+\scratchbox=\box35
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen163
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks33
 )
-\big@size=\dimen154
+\big@size=\dimen164
 LaTeX Info: Redefining \microtypecontext on input line 16.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -873,7 +924,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box34
+\AtBeginShipoutBox=\box36
 Package hyperref Info: Link coloring ON on input line 16.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -882,7 +933,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count127
+\c@section@level=\count130
 )
 LaTeX Info: Redefining \ref on input line 16.
 LaTeX Info: Redefining \pageref on input line 16.
@@ -963,7 +1014,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.99591pt on input line 40.
 
-<figures/comparison.png, id=104, 501.875pt x 342.27875pt>
+<figures/comparison.png, id=108, 501.875pt x 342.27875pt>
 File: figures/comparison.png Graphic file (type png)
 
 <use figures/comparison.png>
@@ -981,14 +1032,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2 <./figures/comparison.png>] [3]
-<figures/related_work.png, id=125, 376.40625pt x 150.5625pt>
+<figures/related_work.png, id=129, 376.40625pt x 150.5625pt>
 File: figures/related_work.png Graphic file (type png)
 
 <use figures/related_work.png>
 Package pdftex.def Info: figures/related_work.png used on input line 67.
 (pdftex.def)             Requested size: 376.40532pt x 150.56212pt.
  [4] [5 <./figures/related_work.png>] [6]
-[7] <figures/measurement_goal.png, id=145, 501.875pt x 121.95563pt>
+[7] <figures/measurement_goal.png, id=149, 501.875pt x 121.95563pt>
 File: figures/measurement_goal.png Graphic file (type png)
 
 <use figures/measurement_goal.png>
@@ -1000,7 +1051,7 @@ Overfull \hbox (32.11874pt too wide) in paragraph at lines 94--96
  []
 
 [8 <./figures/measurement_goal.png>] [9]
-<figures/nsm2_radiation.png, id=156, 326.21875pt x 321.2pt>
+<figures/nsm2_radiation.png, id=160, 326.21875pt x 321.2pt>
 File: figures/nsm2_radiation.png Graphic file (type png)
 
 <use figures/nsm2_radiation.png>
@@ -1011,7 +1062,7 @@ Package pdftex.def Info: figures/nsm2_radiation.png used on input line 119.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10] [11 <./figures/nsm2_radiation.png>] [12]
-<figures/waypoint.png, id=172, 501.875pt x 177.16188pt>
+<figures/waypoint.png, id=176, 501.875pt x 177.16188pt>
 File: figures/waypoint.png Graphic file (type png)
 
 <use figures/waypoint.png>
@@ -1025,7 +1076,7 @@ Overfull \hbox (32.11874pt too wide) in paragraph at lines 143--145
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/flight_log.png, id=173, 330.23375pt x 80.3pt>
+<figures/flight_log.png, id=177, 330.23375pt x 80.3pt>
 File: figures/flight_log.png Graphic file (type png)
 
 <use figures/flight_log.png>
@@ -1036,7 +1087,7 @@ Package pdftex.def Info: figures/flight_log.png used on input line 151.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [13] [14 <./figures/waypoint.png> <./figures/flight_log.png>] [15]
-<figures/apparatus.png, id=191, 250.9375pt x 196.735pt>
+<figures/apparatus.png, id=195, 250.9375pt x 196.735pt>
 File: figures/apparatus.png Graphic file (type png)
 
 <use figures/apparatus.png>
@@ -1067,21 +1118,21 @@ LaTeX Font Info:    Font shape `T1/pcrs/bx/n' in size <12> not available
 (Font)              Font shape `T1/pcrs/b/n' tried instead on input line 194.
 LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
 (Font)              scaled to size 10.5pt on input line 194.
- <figures/rfe_data.png, id=202, 401.5pt x 154.07562pt>
+ <figures/rfe_data.png, id=206, 401.5pt x 154.07562pt>
 File: figures/rfe_data.png Graphic file (type png)
 
 <use figures/rfe_data.png>
 Package pdftex.def Info: figures/rfe_data.png used on input line 195.
 (pdftex.def)             Requested size: 401.49901pt x 154.07524pt.
  [18 <./figures/rfe_data.png>] [19] [20]
-<figures/performance_comparison.png, id=222, 274.52562pt x 200.75pt>
+<figures/performance_comparison.png, id=226, 274.52562pt x 200.75pt>
 File: figures/performance_comparison.png Graphic file (type png)
 
 <use figures/performance_comparison.png>
 Package pdftex.def Info: figures/performance_comparison.png used on input line 
 219.
 (pdftex.def)             Requested size: 274.52495pt x 200.7495pt.
- [21 <./figures/performance_comparison.png>] <figures/lawn_mow_PoC.png, id=229,
+ [21 <./figures/performance_comparison.png>] <figures/lawn_mow_PoC.png, id=233,
  401.5pt x 241.40187pt>
 File: figures/lawn_mow_PoC.png Graphic file (type png)
 
@@ -1093,7 +1144,7 @@ Package pdftex.def Info: figures/lawn_mow_PoC.png used on input line 235.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [22] [23 <./figures/lawn_mow_PoC.png>]
-<figures/data_pipeline.png, id=240, 506.89375pt x 519.9425pt>
+<figures/data_pipeline.png, id=244, 506.89375pt x 519.9425pt>
 File: figures/data_pipeline.png Graphic file (type png)
 
 <use figures/data_pipeline.png>
@@ -1112,49 +1163,57 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 262.
 
-<figures/PoC_1.png, id=253, 255.95625pt x 301.125pt>
+<figures/PoC_1.png, id=257, 255.95625pt x 301.125pt>
 File: figures/PoC_1.png Graphic file (type png)
  <use figures/PoC_1.png>
-Package pdftex.def Info: figures/PoC_1.png used on input line 265.
+Package pdftex.def Info: figures/PoC_1.png used on input line 266.
 (pdftex.def)             Requested size: 255.95561pt x 301.12425pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
 [26] [27 <./figures/PoC_1.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
+<figures/PoC_2.png, id=270, 552.0625pt x 416.55624pt>
+File: figures/PoC_2.png Graphic file (type png)
+ <use figures/PoC_2.png>
+Package pdftex.def Info: figures/PoC_2.png used on input line 279.
+(pdftex.def)             Requested size: 552.06114pt x 416.55522pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+
+[28] [29 <./figures/PoC_2.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 417785FD6E9D182ED275457170DF1981;6266.
+(rerunfilecheck)             Checksum: 6B4AEC84AF6089F6FB205F88F6DDEDB4;6506.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14894 strings out of 493089
- 218672 string characters out of 6134842
- 334930 words of memory out of 5000000
- 17898 multiletter control sequences out of 15000+600000
+ 15636 strings out of 493089
+ 230835 string characters out of 6134842
+ 348616 words of memory out of 5000000
+ 18600 multiletter control sequences out of 15000+600000
  74677 words of font info for 221 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,8n,40p,1311b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,8n,75p,1923b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on thesis.pdf (27 pages, 2274151 bytes).
+ts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on thesis.pdf (29 pages, 2614184 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 246 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 43269 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 330 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 43282 words of extra memory for PDF output out of 51595 (max. 10000000)
 
