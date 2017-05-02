@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 MAY 2017 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 MAY 2017 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1150,23 +1150,18 @@ File: figures/data_pipeline.png Graphic file (type png)
 <use figures/data_pipeline.png>
 Package pdftex.def Info: figures/data_pipeline.png used on input line 253.
 (pdftex.def)             Requested size: 506.89252pt x 519.94124pt.
-
-Overfull \hbox (37.1375pt too wide) in paragraph at lines 253--255
- [][] 
- []
-
-[24] [25 <./figures/data_pipeline.png>]
+ [24] [25 <./figures/data_pipeline.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 262.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 261.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 262.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 261.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 262.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 261.
 
 <figures/PoC_1.png, id=257, 255.95625pt x 301.125pt>
 File: figures/PoC_1.png Graphic file (type png)
  <use figures/PoC_1.png>
-Package pdftex.def Info: figures/PoC_1.png used on input line 266.
+Package pdftex.def Info: figures/PoC_1.png used on input line 265.
 (pdftex.def)             Requested size: 255.95561pt x 301.12425pt.
 
 
@@ -1176,15 +1171,15 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figures/PoC_2.png, id=270, 552.0625pt x 416.55624pt>
 File: figures/PoC_2.png Graphic file (type png)
  <use figures/PoC_2.png>
-Package pdftex.def Info: figures/PoC_2.png used on input line 279.
+Package pdftex.def Info: figures/PoC_2.png used on input line 278.
 (pdftex.def)             Requested size: 552.06114pt x 416.55522pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 289.
 
 [28] [29 <./figures/PoC_2.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 6B4AEC84AF6089F6FB205F88F6DDEDB4;6506.
 
@@ -1199,7 +1194,7 @@ Here is how much of TeX's memory you used:
  18600 multiletter control sequences out of 15000+600000
  74677 words of font info for 221 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,8n,75p,1923b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,8n,75p,2072b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
@@ -1210,7 +1205,7 @@ ts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on thesis.pdf (29 pages, 2614184 bytes).
+Output written on thesis.pdf (29 pages, 2615440 bytes).
 PDF statistics:
  330 PDF objects out of 1000 (max. 8388607)
  261 compressed objects within 3 object streams
