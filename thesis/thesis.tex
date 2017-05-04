@@ -205,7 +205,11 @@ The receiver apparatus had to be mounted to the P3A in order to take measurement
 
  Once the gimbal was removed, several design choices regarding the design of the apparatus presented themselves. The measurement apparatus consisted of the three components: the Raspberry Pi, the RF Explorer spectrum analyzer and the Anker lipstick battery needed to power the Pi. One option was to secure these components to the body of the P3A separately; however, the Pi needed to be connected via USB cables to the other devices. Rather than have the devices taped individually around the aircraft, requiring loose wiring to connect them, we chose to create a lightweight mounting platform that would securely fix to the now vacant bracket formerly occupied by the camera gimbal.
  
- [MOUNTING IMAGE]
+\begin{figure}
+	\caption{Left: Preparing the P3A for mounting. First, the camera gimbal is remove to expose a mounting bracket. Note the protruding VPS unit at the rear of the craft, which needed to remain unobstructed for stability. Right: Mounting the apparatus to the bracket. Note the constraints imposed by the spacing of the holes in the bracket. The P3A had a tested payload capacity of 300 g.}
+	\centerline{\includegraphics{mounting}}
+\end{figure}
+
  
  A lightweight, balsa wood board was cut to function as the platform for the mounting apparatus. Then, space constraints imposed by the P3A had to be accounted for while considering how to lay out the components of the apparatus. First, in order to attach the board to the bracket, 2 inch bolts with 1 inch spacers were inserted into the openings on the bracket; holes were cut out of the balsa board and the board was fixed in place with washers. This construction was necessitated by the placement of the bracket holes. Laid next to each other, the Pi and the RFE were simply wider than the width of the bracket holes, where bolts would have to secure the board to the drone. Instead, one of the devices would have to go on top of the board and the other on the bottom, which is why the spacers were introduced. Another constraint that presented itself in this revised design was the P3A's VPS sensor attachment, which was fixed to the bottom of the drone towards the rear of the craft and protruded out from the body. Further, if the VPS sensors were covered in any part by the measurement apparatus, optical stabilization would be disabled and the drone might not produce as precise spatial data. 
  
@@ -322,6 +326,13 @@ Location was an important consideration for this phase of testing, as we wanted 
 
 The open courtyard feature created by the Friend Center, Computer Science building, and Sherrerd Hall featured several interesting urban characteristics and could be used as a model simulating a real mesh network use case. First, the buildings are situated in fairly close proximity to each other and are all three or four stories in height; this limited the scope of our experiment and made it viable to construct a 3-D point cloud mapping the entire area. Further, certain sections of the space don't have direct line-of-sight (LOS) with other sections; placing a transmitter strategically in these locations could provide insight on how obstacles affect propagation throughout the space. 
 
-Since the drone can't automatically detect and avoid obstacles, the space was split into three sections separated by various features. Two rows of trees and the three buildings served as features that we could fly in front of and behind to get a robust understanding of propagation in this location. 
+One of the limitations of data collected in the open field test was the sparsity of the spatial data; for this simulation, we flew the drone in a more dense flight pattern. In the field test, parallel sweeps in the lawn mowing pattern were drawn 14-23 ft apart; at Friend Center, parallel lines were spaced only 7-10 ft apart. The overall 2-D area sampled was also larger than in the field test because we wanted to gather measurements throughout the entire space between the three buildings. Since the drone can't automatically detect and avoid obstacles, the space was split into three sections separated by various features. Two rows of trees and the three buildings served as features that we could fly in front of and behind to get a robust understanding of propagation in this location.
+
+\begin{figure}
+	\caption{The Friend Center courtyard urban feature; the pink areas were sampled. The transmitter was placed in one corner of the courtyard.}
+	\centerline{\includegraphics{friend_1}}
+\end{figure}
+
+Flights in the Friend Center courtyard were performed with the M900 always on with the same configuration as the open field test. The transmitter was always on in this round of testing because the field test revealed that  ambient noise in the 900 MHz is generally non-existent; before flying near Friend Center, a manual war walking test with the RFE confirmed that there was no noise in the sampled spectrum in this location either. Testing needed to be limited due to limited battery life. With a denser flight path over a larger spatial area, sampling the entire space twice with the transmitter on and off was not feasible.
 \end{document} 
 
