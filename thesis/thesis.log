@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 MAY 2017 05:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 MAY 2017 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,221 +1021,228 @@ File: figures/comparison.png Graphic file (type png)
 Package pdftex.def Info: figures/comparison.png used on input line 41.
 (pdftex.def)             Requested size: 501.87376pt x 342.2779pt.
 
-Overfull \hbox (32.11874pt too wide) in paragraph at lines 41--43
- [][] 
- []
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2 <./figures/comparison.png>] [3]
-<figures/related_work.png, id=161, 376.40625pt x 150.5625pt>
+[2 <./figures/comparison.png>] [3] [4]
+<figures/related_work.png, id=165, 376.40625pt x 150.5625pt>
 File: figures/related_work.png Graphic file (type png)
 
 <use figures/related_work.png>
-Package pdftex.def Info: figures/related_work.png used on input line 67.
+Package pdftex.def Info: figures/related_work.png used on input line 72.
 (pdftex.def)             Requested size: 376.40532pt x 150.56212pt.
- [4] [5 <./figures/related_work.png>] [6]
-[7] <figures/measurement_goal.png, id=181, 501.875pt x 121.95563pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6 <./figures/related_work.png>] [7] [8]
+<figures/measurement_goal.png, id=186, 501.875pt x 121.95563pt>
 File: figures/measurement_goal.png Graphic file (type png)
 
 <use figures/measurement_goal.png>
-Package pdftex.def Info: figures/measurement_goal.png used on input line 94.
+Package pdftex.def Info: figures/measurement_goal.png used on input line 99.
 (pdftex.def)             Requested size: 501.87376pt x 121.9553pt.
 
-Overfull \hbox (32.11874pt too wide) in paragraph at lines 94--96
+Overfull \hbox (32.11874pt too wide) in paragraph at lines 99--101
  [][] 
  []
 
-[8 <./figures/measurement_goal.png>] [9]
-<figures/nsm2_radiation.png, id=193, 326.21875pt x 321.2pt>
-File: figures/nsm2_radiation.png Graphic file (type png)
+[9 <./figures/measurement_goal.png>] [10]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 120.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 120.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 120.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 120.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 120.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 120.
 
-<use figures/nsm2_radiation.png>
-Package pdftex.def Info: figures/nsm2_radiation.png used on input line 119.
-(pdftex.def)             Requested size: 326.21794pt x 321.19922pt.
+<figures/m900_radiation.png, id=198, 326.21875pt x 347.79938pt>
+File: figures/m900_radiation.png Graphic file (type png)
+
+<use figures/m900_radiation.png>
+Package pdftex.def Info: figures/m900_radiation.png used on input line 124.
+(pdftex.def)             Requested size: 326.21794pt x 347.79852pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10] [11 <./figures/nsm2_radiation.png>] [12]
-<figures/waypoint.png, id=208, 501.875pt x 177.16188pt>
+[11] [12 <./figures/m900_radiation.png>] [13]
+<figures/waypoint.png, id=215, 501.875pt x 177.16188pt>
 File: figures/waypoint.png Graphic file (type png)
 
 <use figures/waypoint.png>
-Package pdftex.def Info: figures/waypoint.png used on input line 143.
+Package pdftex.def Info: figures/waypoint.png used on input line 146.
 (pdftex.def)             Requested size: 501.87376pt x 177.16144pt.
 
-Overfull \hbox (32.11874pt too wide) in paragraph at lines 143--145
+Overfull \hbox (32.11874pt too wide) in paragraph at lines 146--148
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/flight_log.png, id=209, 330.23375pt x 80.3pt>
+[14 <./figures/waypoint.png>]
+<figures/flight_log.png, id=222, 330.23375pt x 80.3pt>
 File: figures/flight_log.png Graphic file (type png)
 
 <use figures/flight_log.png>
-Package pdftex.def Info: figures/flight_log.png used on input line 151.
+Package pdftex.def Info: figures/flight_log.png used on input line 154.
 (pdftex.def)             Requested size: 330.23293pt x 80.29979pt.
+ [15 <./figures/flight_log.png>]
+<figures/apparatus.png, id=229, 250.9375pt x 196.735pt>
+File: figures/apparatus.png Graphic file (type png)
+
+<use figures/apparatus.png>
+Package pdftex.def Info: figures/apparatus.png used on input line 174.
+(pdftex.def)             Requested size: 250.93687pt x 196.7345pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13] [14 <./figures/waypoint.png> <./figures/flight_log.png>] [15]
-<figures/apparatus.png, id=227, 250.9375pt x 196.735pt>
-File: figures/apparatus.png Graphic file (type png)
-
-<use figures/apparatus.png>
-Package pdftex.def Info: figures/apparatus.png used on input line 171.
-(pdftex.def)             Requested size: 250.93687pt x 196.7345pt.
- [16 <./figures/apparatus.png>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
-LaTeX Font Info:    Try loading font information for T1+pcrs on input line 189.
+[16] [17 <./figures/apparatus.png>]
+LaTeX Font Info:    Try loading font information for T1+pcrs on input line 192.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/courier-scaled/t1pcrs.fd
 File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
 )
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
-(Font)              scaled to size 10.5pt on input line 189.
+(Font)              scaled to size 10.5pt on input line 192.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `pcrs' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-[17]
+[18]
 LaTeX Font Info:    Font shape `T1/pcrs/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcrs/b/n' tried instead on input line 194.
+(Font)              Font shape `T1/pcrs/b/n' tried instead on input line 197.
 LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
-(Font)              scaled to size 10.5pt on input line 194.
- <figures/rfe_data.png, id=238, 401.5pt x 154.07562pt>
+(Font)              scaled to size 10.5pt on input line 197.
+ <figures/rfe_data.png, id=247, 401.5pt x 154.07562pt>
 File: figures/rfe_data.png Graphic file (type png)
 
 <use figures/rfe_data.png>
-Package pdftex.def Info: figures/rfe_data.png used on input line 195.
+Package pdftex.def Info: figures/rfe_data.png used on input line 198.
 (pdftex.def)             Requested size: 401.49901pt x 154.07524pt.
- [18 <./figures/rfe_data.png>] [19]
-<figures/mounting.png, id=254, 401.5pt x 390.96063pt>
+ [19 <./figures/rfe_data.png>]
+<figures/mounting.png, id=256, 401.5pt x 390.96063pt>
 File: figures/mounting.png Graphic file (type png)
 
 <use figures/mounting.png>
-Package pdftex.def Info: figures/mounting.png used on input line 210.
+Package pdftex.def Info: figures/mounting.png used on input line 213.
 (pdftex.def)             Requested size: 401.49901pt x 390.95967pt.
- [20 <./figures/mounting.png>]
-<figures/performance_comparison.png, id=261, 274.52562pt x 200.75pt>
+ [20] [21 <./figures/mounting.png>]
+<figures/performance_comparison.png, id=267, 274.52562pt x 200.75pt>
 File: figures/performance_comparison.png Graphic file (type png)
 
 <use figures/performance_comparison.png>
 Package pdftex.def Info: figures/performance_comparison.png used on input line 
-223.
+226.
 (pdftex.def)             Requested size: 274.52495pt x 200.7495pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] [22 <./figures/performance_comparison.png>]
-<figures/lawn_mow_PoC.png, id=272, 401.5pt x 241.40187pt>
+[22] [23 <./figures/performance_comparison.png>]
+<figures/lawn_mow_PoC.png, id=278, 401.5pt x 241.40187pt>
 File: figures/lawn_mow_PoC.png Graphic file (type png)
 
 <use figures/lawn_mow_PoC.png>
-Package pdftex.def Info: figures/lawn_mow_PoC.png used on input line 239.
+Package pdftex.def Info: figures/lawn_mow_PoC.png used on input line 242.
 (pdftex.def)             Requested size: 401.49901pt x 241.40128pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[23] [24 <./figures/lawn_mow_PoC.png>]
-<figures/data_pipeline.png, id=283, 506.89375pt x 519.9425pt>
+ [24 <./figures/lawn_mow_PoC.png>] [25]
+<figures/data_pipeline.png, id=290, 506.89375pt x 519.9425pt>
 File: figures/data_pipeline.png Graphic file (type png)
 
 <use figures/data_pipeline.png>
-Package pdftex.def Info: figures/data_pipeline.png used on input line 257.
+Package pdftex.def Info: figures/data_pipeline.png used on input line 260.
 (pdftex.def)             Requested size: 506.89252pt x 519.94124pt.
- [25]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 265.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 265.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 265.
- [26 <./figures/data_pipeline.png>]
+ [26]
 <figures/PoC_1.png, id=296, 255.95625pt x 301.125pt>
 File: figures/PoC_1.png Graphic file (type png)
  <use figures/PoC_1.png>
-Package pdftex.def Info: figures/PoC_1.png used on input line 269.
+Package pdftex.def Info: figures/PoC_1.png used on input line 272.
 (pdftex.def)             Requested size: 255.95561pt x 301.12425pt.
 
-[27 <./figures/PoC_1.png>]
-<figures/PoC_2.png, id=304, 552.0625pt x 416.55624pt>
+[27 <./figures/data_pipeline.png>] [28 <./figures/PoC_1.png>]
+<figures/PoC_2.png, id=310, 552.0625pt x 416.55624pt>
 File: figures/PoC_2.png Graphic file (type png)
  <use figures/PoC_2.png>
-Package pdftex.def Info: figures/PoC_2.png used on input line 280.
+Package pdftex.def Info: figures/PoC_2.png used on input line 283.
 (pdftex.def)             Requested size: 552.06114pt x 416.55522pt.
 
-[28] [29 <./figures/PoC_2.png>] [30] [31]
-<figures/Sexton_1.png, id=326, 501.875pt x 345.29pt>
+[29 <./figures/PoC_2.png>] [30] [31] [32]
+<figures/Sexton_1.png, id=332, 501.875pt x 345.29pt>
 File: figures/Sexton_1.png Graphic file (type png)
 
 <use figures/Sexton_1.png>
-Package pdftex.def Info: figures/Sexton_1.png used on input line 306.
+Package pdftex.def Info: figures/Sexton_1.png used on input line 309.
 (pdftex.def)             Requested size: 501.87376pt x 345.28914pt.
- [32 <./figures/Sexton_1.png>]
-<figures/Sexton_2.png, id=333, 446.16687pt x 416.55624pt>
+ [33 <./figures/Sexton_1.png>]
+<figures/Sexton_2.png, id=340, 446.16687pt x 416.55624pt>
 File: figures/Sexton_2.png Graphic file (type png)
 
 <use figures/Sexton_2.png>
-Package pdftex.def Info: figures/Sexton_2.png used on input line 315.
+Package pdftex.def Info: figures/Sexton_2.png used on input line 318.
 (pdftex.def)             Requested size: 446.16579pt x 416.55522pt.
- [33] [34 <./figures/Sexton_2.png>]
-<figures/friend_1.png, id=345, 200.75pt x 186.6975pt>
+ [34] [35 <./figures/Sexton_2.png>]
+<figures/friend_1.png, id=351, 200.75pt x 186.6975pt>
 File: figures/friend_1.png Graphic file (type png)
 
 <use figures/friend_1.png>
-Package pdftex.def Info: figures/friend_1.png used on input line 333.
+Package pdftex.def Info: figures/friend_1.png used on input line 336.
 (pdftex.def)             Requested size: 200.7495pt x 186.69704pt.
- [35] [36 <./figures/friend_1.png>] [37]
-<figures/friend_3.png, id=361, 301.125pt x 408.52625pt>
+ [36]
+<figures/friend_3.png, id=356, 301.125pt x 408.52625pt>
 File: figures/friend_3.png Graphic file (type png)
 
 <use figures/friend_3.png>
 Package pdftex.def Info: figures/friend_3.png used on input line 349.
 (pdftex.def)             Requested size: 301.12425pt x 408.52525pt.
-
-<figures/friend_4.png, id=362, 401.5pt x 143.53625pt>
+ [37 <./figures/friend_1.png>]
+<figures/friend_4.png, id=364, 401.5pt x 143.53625pt>
 File: figures/friend_4.png Graphic file (type png)
 
 <use figures/friend_4.png>
 Package pdftex.def Info: figures/friend_4.png used on input line 354.
 (pdftex.def)             Requested size: 401.49901pt x 143.53589pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 362.
- [38 <./figures/friend_3.png>] [39 <./figures/friend_4.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 362.
- (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 362.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 362.
+ [38] [39 <./figures/friend_3.png>] [40 <./figures/friend_4.png>] [41]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 378.
+
+<figures/ray_tracing.png, id=385, 301.125pt x 222.8325pt>
+File: figures/ray_tracing.png Graphic file (type png)
+
+<use figures/ray_tracing.png>
+Package pdftex.def Info: figures/ray_tracing.png used on input line 380.
+(pdftex.def)             Requested size: 301.12425pt x 222.83195pt.
+ [42 <./figures/ray_tracing.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 389.
+ [43]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 389.
+
+(./thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 389.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 389.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 40192F2F7E994629E950B9E0E6D273F5;8649.
+(rerunfilecheck)             Checksum: 09FE00CD29536D050FE1F18EF1991197;8650.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15700 strings out of 493089
- 231906 string characters out of 6134842
+ 15714 strings out of 493089
+ 232095 string characters out of 6134842
  348616 words of memory out of 5000000
- 18634 multiletter control sequences out of 15000+600000
- 76321 words of font info for 222 fonts, out of 8000000 for 9000
+ 18638 multiletter control sequences out of 15000+600000
+ 76451 words of font info for 224 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,8n,75p,2049b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1248,10 +1255,10 @@ st/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texmf-dist/font
 s/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utm
 r8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (39 pages, 4460972 bytes).
+Output written on thesis.pdf (43 pages, 5056631 bytes).
 PDF statistics:
- 434 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 94 named destinations out of 1000 (max. 500000)
- 43888 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 457 PDF objects out of 1000 (max. 8388607)
+ 358 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 43893 words of extra memory for PDF output out of 51595 (max. 10000000)
 
