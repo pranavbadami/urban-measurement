@@ -1,0 +1,20 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Comparison of broadband speeds, US vs Europe}}{7}{figure.caption.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Related measurement campaigns}}{10}{figure.caption.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Main research goals: point cloud and aggregation}}{14}{figure.caption.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Radiation patterns of the Ubiquiti NanoBridge M900\cite {nanobridge}\relax }}{16}{figure.caption.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Waypoints missions in the Litchi app}}{19}{figure.caption.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Example flight log from the Litchi app.}}{20}{figure.caption.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Layout of the receiver apparatus, which is to be mounted on a DJI Phantom 3 drone.\relax }}{22}{figure.caption.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Preparing the drone and mounting the apparatus}}{25}{figure.caption.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Comparison of light paths with heavy and light apparatus}}{27}{figure.caption.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces "Lawn mowing" flight pattern approach}}{29}{figure.caption.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Data processing pipeline}}{31}{figure.caption.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Point cloud visualization from proof-of-concept 2.4 GHz test}}{33}{figure.caption.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Closer analysis of PoC point cloud at different frequencies; identifying noise}}{34}{figure.caption.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Point cloud visualization of 900 MHz open field test}}{38}{figure.caption.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Point cloud visualization of max values from 900 MHz open field test}}{39}{figure.caption.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Friend Center planning and flight path.}}{42}{figure.caption.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Bird's eye view and distributions of Friend Center and field control test point clouds.}}{44}{figure.caption.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Side view of Friend Center and field control test point clouds.}}{45}{figure.caption.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Distributions of the measurements gathered at sections 1-3 at Friend Center and in the field control test}}{45}{figure.caption.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Future work includes comparison with ray tracing models}}{48}{figure.caption.20}
